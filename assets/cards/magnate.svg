@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+  <!-- Magnate: an oligarch in a high collar, monocle lens lit, the skyline and a rising ledger behind -->
+  <defs>
+    <clipPath id="card"><rect width="200" height="280" rx="18"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3036"/><stop offset="0.6" stop-color="#121417"/><stop offset="1" stop-color="#08090A"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9CED4"/><stop offset="1" stop-color="#3E444B"/>
+    </linearGradient>
+    <mask id="sunscan">
+      <rect width="200" height="280" fill="#fff"/>
+      <rect x="0" y="104" width="200" height="1.5" fill="#000"/>
+      <rect x="0" y="112" width="200" height="2.2" fill="#000"/>
+      <rect x="0" y="120" width="200" height="3" fill="#000"/>
+      <rect x="0" y="128" width="200" height="4" fill="#000"/>
+      <rect x="0" y="137" width="200" height="5" fill="#000"/>
+      <rect x="0" y="147" width="200" height="6" fill="#000"/>
+    </mask>
+    <radialGradient id="halo" cx="100" cy="86" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A9B0B8" stop-opacity="0.32"/><stop offset="1" stop-color="#A9B0B8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14171A"/><stop offset="0.62" stop-color="#2A2F34"/><stop offset="1" stop-color="#6B727A"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B0C0E"/><stop offset="0.7" stop-color="#1B1F23"/><stop offset="1" stop-color="#3B4148"/>
+    </linearGradient>
+    <radialGradient id="lens" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#C9CED4" stop-opacity="0.6"/><stop offset="1" stop-color="#C9CED4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="win" width="6" height="7" patternUnits="userSpaceOnUse">
+      <rect x="1.5" y="1.5" width="2" height="3" fill="#8D949C" fill-opacity="0.55"/>
+    </pattern>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1" fill="#000" fill-opacity="0.22"/>
+    </pattern>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08090A" stop-opacity="0"/><stop offset="0.35" stop-color="#08090A" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="200" height="280" fill="url(#bg)"/>
+    <circle cx="100" cy="98" r="64" fill="url(#sun)" mask="url(#sunscan)" opacity="0.85"/>
+    <rect width="200" height="280" fill="url(#halo)"/>
+
+    <!-- Skyline -->
+    <g fill="#16191C" stroke="#4A5057" stroke-width="0.8">
+      <path d="M-2 280 V150 H14 V132 H24 V150 H30 V280 Z"/>
+      <path d="M22 280 V118 L32 104 L42 118 V280 Z"/>
+      <path d="M150 280 V128 H162 V108 H166 V96 H170 V108 H174 V128 H186 V280 Z"/>
+      <path d="M180 280 V146 H204 V280 Z"/>
+      <path d="M38 280 V160 H58 V280 Z"/>
+      <path d="M138 280 V156 H156 V280 Z"/>
+    </g>
+    <g fill="url(#win)">
+      <rect x="0" y="152" width="28" height="128"/>
+      <rect x="24" y="120" width="16" height="160"/>
+      <rect x="152" y="130" width="32" height="150"/>
+      <rect x="40" y="162" width="16" height="118"/>
+    </g>
+    <path d="M168 96 V82" stroke="#8D949C" stroke-width="1"/>
+    <circle cx="168" cy="80" r="1.8" fill="#EEF1F3"/>
+
+    <!-- The ledger, climbing -->
+    <path d="M6 186 L30 176 L46 182 L66 160 L82 166 L104 138 L126 146 L148 112 L166 118 L196 70" fill="none" stroke="#EEF1F3" stroke-opacity="0.55" stroke-width="1.3" stroke-linejoin="round"/>
+    <g fill="#EEF1F3" fill-opacity="0.8">
+      <circle cx="66" cy="160" r="1.8"/><circle cx="104" cy="138" r="1.8"/><circle cx="148" cy="112" r="1.8"/><circle cx="196" cy="70" r="2.2"/>
+    </g>
+
+    <!-- Body -->
+    <path d="M10 280 C12 228 34 198 74 184 L100 230 L126 184 C166 198 188 228 190 280 Z" fill="url(#suit)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M88 132 L88 160 L112 160 L112 132 Z" fill="#1A1D21"/>
+    <path d="M112 134 L112 158" stroke="#6B727A" stroke-width="1.4"/>
+    <!-- High collar and cravat -->
+    <path d="M84 150 L100 172 L116 150 L119 168 L100 186 L81 168 Z" fill="#E6EAED"/>
+    <path d="M100 172 L93 182 L100 222 L107 182 Z" fill="#2A2F35" stroke="#EEF1F3" stroke-width="1.6" stroke-linejoin="round"/>
+    <circle cx="100" cy="186" r="2.6" fill="#EEF1F3"/>
+    <!-- Lapels -->
+    <path d="M74 184 L100 230 L90 248 L62 200 Z" fill="#23272C" stroke="#8D949C" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M126 184 L100 230 L110 248 L138 200 Z" fill="#30353B" stroke="#C9CED4" stroke-width="1.2" stroke-linejoin="round"/>
+    <!-- Lapel pin: the ledger bars -->
+    <g fill="#EEF1F3"><rect x="72" y="208" width="2" height="4"/><rect x="75.5" y="205" width="2" height="7"/><rect x="79" y="202" width="2" height="10"/></g>
+    <!-- Pocket square -->
+    <path d="M140 222 L146 214 L150 220 L155 213 L158 224 Z" fill="#E6EAED"/>
+    <path d="M136 225 H162" stroke="#8D949C" stroke-width="1.2"/>
+    <!-- Rim light down the right shoulder -->
+    <path d="M128 186 C160 196 182 222 188 262" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.7"/>
+
+    <!-- Head -->
+    <path d="M100 52 C123 52 132 72 131 96 C130 120 117 136 100 136 C83 136 70 120 69 96 C68 72 77 52 100 52 Z" fill="url(#skin)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M69 98 C70 120 82 134 100 136 C88 128 80 114 78 98 Z" fill="#0B0C0E" fill-opacity="0.55"/>
+    <path d="M131 92 C131 116 121 132 104 136" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-opacity="0.85"/>
+    <!-- Slicked hair, comb lines catching the light -->
+    <path d="M68 94 C61 60 80 40 106 41 C131 42 142 60 134 90 C131 74 122 63 108 59 C94 56 78 66 68 94 Z" fill="#0B0C0E" stroke="#EEF1F3" stroke-width="1.6"/>
+    <path d="M68 94 C66 86 66 80 69 74" fill="none" stroke="#8D949C" stroke-width="1"/>
+    <g fill="none" stroke="#8D949C" stroke-width="1" stroke-linecap="round">
+      <path d="M74 64 C84 50 104 46 124 52"/><path d="M72 74 C82 58 104 52 130 60"/><path d="M84 50 C96 44 112 44 122 48"/><path d="M108 59 C118 58 128 62 133 70"/>
+    </g>
+    <path d="M118 46 C126 50 132 58 133 70" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.8"/>
+    <!-- Brows, eye, nose, mouth -->
+    <path d="M77 89 L94 85.5" stroke="#EEF1F3" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M106 86 L122 88" stroke="#EEF1F3" stroke-width="2" stroke-linecap="round"/>
+    <path d="M80 97 C84 94.5 89 94.5 94 97 C89 99 84 99 80 97 Z" fill="#EEF1F3"/>
+    <circle cx="88" cy="97" r="1.5" fill="#0B0C0E"/>
+    <path d="M69 90 C63 90 62 104 68 108" fill="none" stroke="#EEF1F3" stroke-width="1.6"/>
+    <path d="M76 106 C80 112 84 114 89 114" fill="none" stroke="#4A5057" stroke-width="1.2"/>
+    <path d="M100 100 L96 115 L102 116" fill="none" stroke="#8D949C" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M90 123 C96 121.5 104 121.5 110 122.5" fill="none" stroke="#EEF1F3" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M95 128 H105" stroke="#4A5057" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Cybernetic monocle -->
+    <circle cx="114" cy="98" r="13" fill="#0B0C0E" fill-opacity="0.6"/>
+    <circle cx="114" cy="98" r="11" fill="url(#lens)" stroke="#EEF1F3" stroke-width="2.2"/>
+    <circle cx="114" cy="98" r="15" fill="none" stroke="#8D949C" stroke-width="0.8" stroke-dasharray="1.5 2.5"/>
+    <circle cx="114" cy="98" r="2.4" fill="#FFFFFF"/>
+    <path d="M126 104 L132 108" stroke="#EEF1F3" stroke-width="1.4"/>
+    <path d="M114 111 C120 132 132 150 140 170 C144 180 144 194 141 212" fill="none" stroke="#C9CED4" stroke-width="1.1" stroke-dasharray="1.5 2.5"/>
+
+    <rect width="200" height="280" fill="url(#scan)"/>
+
+    <!-- Emblem plate -->
+    <rect x="0" y="214" width="200" height="66" fill="url(#plate)"/>
+    <path d="M24 236 H176" stroke="#EEF1F3" stroke-opacity="0.35" stroke-width="0.8"/>
+    <path d="M52 256 H78 M122 256 H148" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1.2"/>
+    <g fill="none" stroke="#EEF1F3" stroke-width="2"><circle cx="92" cy="259" r="7"/><circle cx="92" cy="259" r="2.9" stroke-width="1.4"/><circle cx="108" cy="259" r="7"/><circle cx="108" cy="259" r="2.9" stroke-width="1.4"/><circle cx="100" cy="245.5" r="7"/><circle cx="100" cy="245.5" r="2.9" stroke-width="1.4"/></g>
+  </g>
+</svg>

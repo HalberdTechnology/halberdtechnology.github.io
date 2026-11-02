@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+  <!-- Operative: hooded, visor slit lit, a scope reticle and rain behind -->
+  <defs>
+    <clipPath id="card"><rect width="200" height="280" rx="18"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3036"/><stop offset="0.6" stop-color="#121417"/><stop offset="1" stop-color="#08090A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="100" cy="90" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A9B0B8" stop-opacity="0.3"/><stop offset="1" stop-color="#A9B0B8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14171A"/><stop offset="0.62" stop-color="#2A2F34"/><stop offset="1" stop-color="#6B727A"/>
+    </linearGradient>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B0C0E"/><stop offset="0.7" stop-color="#1B1F23"/><stop offset="1" stop-color="#3B4148"/>
+    </linearGradient>
+    <linearGradient id="clothL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3B4148"/><stop offset="0.3" stop-color="#1B1F23"/><stop offset="1" stop-color="#0B0C0E"/>
+    </linearGradient>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1" fill="#000" fill-opacity="0.22"/>
+    </pattern>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08090A" stop-opacity="0"/><stop offset="0.35" stop-color="#08090A" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="200" height="280" fill="url(#bg)"/>
+    <rect width="200" height="280" fill="url(#halo)"/>
+    <!-- Rooftop ledge and antenna masts -->
+    <path d="M-2 196 H60 V188 H96 V196 H202 V280 H-2 Z" fill="#101215" stroke="#4A5057" stroke-width="0.8"/>
+    <path d="M22 196 V140 M18 150 H26 M18 160 H26 M174 196 V128 M170 140 H178 M170 150 H178" stroke="#4A5057" stroke-width="1.2"/>
+    <circle cx="174" cy="126" r="1.6" fill="#EEF1F3"/>
+    <!-- Scope reticle -->
+    <circle cx="100" cy="92" r="74" fill="none" stroke="#EEF1F3" stroke-opacity="0.35" stroke-width="1"/>
+    <circle cx="100" cy="92" r="58" fill="none" stroke="#EEF1F3" stroke-opacity="0.18" stroke-width="0.8" stroke-dasharray="3 5"/>
+    <path d="M170.0 92.0 L178.0 92.0 M172.7 98.4 L175.7 98.6 M171.9 104.7 L174.8 105.2 M170.5 110.9 L173.4 111.7 M168.6 117.0 L171.4 118.0 M166.2 122.9 L168.9 124.1 M160.6 127.0 L167.5 131.0 M159.8 133.9 L162.3 135.6 M155.9 138.9 L158.2 140.9 M151.6 143.6 L153.7 145.7 M146.9 147.9 L148.9 150.2 M141.9 151.8 L143.6 154.3 M135.0 152.6 L139.0 159.5 M130.9 158.2 L132.1 160.9 M125.0 160.6 L126.0 163.4 M118.9 162.5 L119.7 165.4 M112.7 163.9 L113.2 166.8 M106.4 164.7 L106.6 167.7 M100.0 162.0 L100.0 170.0 M93.6 164.7 L93.4 167.7 M87.3 163.9 L86.8 166.8 M81.1 162.5 L80.3 165.4 M75.0 160.6 L74.0 163.4 M69.1 158.2 L67.9 160.9 M65.0 152.6 L61.0 159.5 M58.1 151.8 L56.4 154.3 M53.1 147.9 L51.1 150.2 M48.4 143.6 L46.3 145.7 M44.1 138.9 L41.8 140.9 M40.2 133.9 L37.7 135.6 M39.4 127.0 L32.5 131.0 M33.8 122.9 L31.1 124.1 M31.4 117.0 L28.6 118.0 M29.5 110.9 L26.6 111.7 M28.1 104.7 L25.2 105.2 M27.3 98.4 L24.3 98.6 M30.0 92.0 L22.0 92.0 M27.3 85.6 L24.3 85.4 M28.1 79.3 L25.2 78.8 M29.5 73.1 L26.6 72.3 M31.4 67.0 L28.6 66.0 M33.8 61.1 L31.1 59.9 M39.4 57.0 L32.5 53.0 M40.2 50.1 L37.7 48.4 M44.1 45.1 L41.8 43.1 M48.4 40.4 L46.3 38.3 M53.1 36.1 L51.1 33.8 M58.1 32.2 L56.4 29.7 M65.0 31.4 L61.0 24.5 M69.1 25.8 L67.9 23.1 M75.0 23.4 L74.0 20.6 M81.1 21.5 L80.3 18.6 M87.3 20.1 L86.8 17.2 M93.6 19.3 L93.4 16.3 M100.0 22.0 L100.0 14.0 M106.4 19.3 L106.6 16.3 M112.7 20.1 L113.2 17.2 M118.9 21.5 L119.7 18.6 M125.0 23.4 L126.0 20.6 M130.9 25.8 L132.1 23.1 M135.0 31.4 L139.0 24.5 M141.9 32.2 L143.6 29.7 M146.9 36.1 L148.9 33.8 M151.6 40.4 L153.7 38.3 M155.9 45.1 L158.2 43.1 M159.8 50.1 L162.3 48.4 M160.6 57.0 L167.5 53.0 M166.2 61.1 L168.9 59.9 M168.6 67.0 L171.4 66.0 M170.5 73.1 L173.4 72.3 M171.9 79.3 L174.8 78.8 M172.7 85.6 L175.7 85.4" stroke="#EEF1F3" stroke-opacity="0.4" stroke-width="0.8"/>
+    <path d="M100 4 V30 M100 154 V176 M10 92 H34 M166 92 H190" stroke="#EEF1F3" stroke-opacity="0.55" stroke-width="1.2"/>
+    <g><path d="M44.2 22.2 l-5.7 20.4" stroke="#8D949C" stroke-opacity="0.14" stroke-width="0.7"/><path d="M99.3 82.4 l-3.1 10.9" stroke="#8D949C" stroke-opacity="0.24" stroke-width="0.7"/><path d="M-30.3 101.4 l-3.1 11.1" stroke="#8D949C" stroke-opacity="0.14" stroke-width="0.7"/><path d="M70.4 211.5 l-3.4 12.0" stroke="#8D949C" stroke-opacity="0.17" stroke-width="0.7"/><path d="M123.1 245.4 l-5.4 19.2" stroke="#8D949C" stroke-opacity="0.21" stroke-width="0.7"/><path d="M213.8 -7.0 l-6.6 23.7" stroke="#8D949C" stroke-opacity="0.19" stroke-width="0.7"/><path d="M-2.5 13.0 l-4.2 14.9" stroke="#8D949C" stroke-opacity="0.31" stroke-width="0.7"/><path d="M7.0 142.8 l-5.7 20.2" stroke="#8D949C" stroke-opacity="0.21" stroke-width="0.7"/><path d="M102.4 -2.4 l-3.1 11.0" stroke="#8D949C" stroke-opacity="0.17" stroke-width="0.7"/><path d="M136.9 99.7 l-4.2 15.0" stroke="#8D949C" stroke-opacity="0.25" stroke-width="0.7"/><path d="M77.8 63.9 l-6.4 22.7" stroke="#8D949C" stroke-opacity="0.28" stroke-width="0.7"/><path d="M23.5 140.8 l-5.2 18.4" stroke="#8D949C" stroke-opacity="0.32" stroke-width="0.7"/><path d="M149.7 60.6 l-7.2 25.7" stroke="#8D949C" stroke-opacity="0.15" stroke-width="0.7"/><path d="M68.7 192.0 l-3.5 12.4" stroke="#8D949C" stroke-opacity="0.23" stroke-width="0.7"/><path d="M-29.8 167.1 l-6.2 22.2" stroke="#8D949C" stroke-opacity="0.25" stroke-width="0.7"/><path d="M187.6 67.8 l-5.9 21.1" stroke="#8D949C" stroke-opacity="0.26" stroke-width="0.7"/><path d="M110.8 107.7 l-6.6 23.4" stroke="#8D949C" stroke-opacity="0.34" stroke-width="0.7"/><path d="M83.3 166.0 l-3.1 11.0" stroke="#8D949C" stroke-opacity="0.28" stroke-width="0.7"/><path d="M128.3 258.1 l-6.5 23.2" stroke="#8D949C" stroke-opacity="0.19" stroke-width="0.7"/><path d="M60.3 167.2 l-2.9 10.4" stroke="#8D949C" stroke-opacity="0.23" stroke-width="0.7"/><path d="M3.7 12.8 l-3.1 10.9" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M-6.4 49.3 l-4.6 16.3" stroke="#8D949C" stroke-opacity="0.32" stroke-width="0.7"/><path d="M-19.0 105.8 l-5.3 18.8" stroke="#8D949C" stroke-opacity="0.32" stroke-width="0.7"/><path d="M173.0 221.9 l-4.0 14.5" stroke="#8D949C" stroke-opacity="0.22" stroke-width="0.7"/><path d="M53.3 227.6 l-7.1 25.3" stroke="#8D949C" stroke-opacity="0.15" stroke-width="0.7"/><path d="M5.8 44.9 l-3.8 13.7" stroke="#8D949C" stroke-opacity="0.23" stroke-width="0.7"/><path d="M113.2 53.6 l-2.8 10.1" stroke="#8D949C" stroke-opacity="0.22" stroke-width="0.7"/><path d="M56.0 138.6 l-7.1 25.2" stroke="#8D949C" stroke-opacity="0.28" stroke-width="0.7"/><path d="M94.0 152.9 l-5.8 20.8" stroke="#8D949C" stroke-opacity="0.13" stroke-width="0.7"/><path d="M193.9 198.4 l-6.7 24.0" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M62.0 91.7 l-3.3 11.7" stroke="#8D949C" stroke-opacity="0.27" stroke-width="0.7"/><path d="M-23.8 -1.1 l-3.7 13.3" stroke="#8D949C" stroke-opacity="0.16" stroke-width="0.7"/><path d="M48.4 -5.3 l-2.8 10.0" stroke="#8D949C" stroke-opacity="0.15" stroke-width="0.7"/><path d="M-13.6 81.8 l-2.9 10.4" stroke="#8D949C" stroke-opacity="0.32" stroke-width="0.7"/><path d="M119.7 21.6 l-3.9 14.0" stroke="#8D949C" stroke-opacity="0.20" stroke-width="0.7"/><path d="M54.7 14.4 l-6.6 23.6" stroke="#8D949C" stroke-opacity="0.35" stroke-width="0.7"/><path d="M81.2 115.5 l-3.2 11.4" stroke="#8D949C" stroke-opacity="0.14" stroke-width="0.7"/><path d="M49.1 54.1 l-6.5 23.3" stroke="#8D949C" stroke-opacity="0.16" stroke-width="0.7"/><path d="M-34.0 246.3 l-5.2 18.5" stroke="#8D949C" stroke-opacity="0.15" stroke-width="0.7"/><path d="M101.2 -12.4 l-5.2 18.4" stroke="#8D949C" stroke-opacity="0.35" stroke-width="0.7"/><path d="M184.5 174.9 l-4.0 14.2" stroke="#8D949C" stroke-opacity="0.20" stroke-width="0.7"/><path d="M3.4 196.1 l-5.2 18.5" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M45.7 42.5 l-6.4 23.0" stroke="#8D949C" stroke-opacity="0.35" stroke-width="0.7"/><path d="M181.7 205.7 l-6.5 23.1" stroke="#8D949C" stroke-opacity="0.29" stroke-width="0.7"/><path d="M19.0 124.9 l-4.4 15.7" stroke="#8D949C" stroke-opacity="0.13" stroke-width="0.7"/><path d="M-32.7 58.2 l-4.0 14.1" stroke="#8D949C" stroke-opacity="0.28" stroke-width="0.7"/><path d="M208.7 105.2 l-7.0 25.0" stroke="#8D949C" stroke-opacity="0.35" stroke-width="0.7"/><path d="M208.3 82.1 l-3.8 13.5" stroke="#8D949C" stroke-opacity="0.17" stroke-width="0.7"/><path d="M11.1 37.2 l-5.6 20.0" stroke="#8D949C" stroke-opacity="0.33" stroke-width="0.7"/><path d="M178.5 114.3 l-5.7 20.4" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M-18.0 165.0 l-6.9 24.6" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M155.0 113.8 l-3.6 12.9" stroke="#8D949C" stroke-opacity="0.30" stroke-width="0.7"/><path d="M46.5 204.2 l-7.2 25.5" stroke="#8D949C" stroke-opacity="0.21" stroke-width="0.7"/><path d="M64.4 245.1 l-6.0 21.6" stroke="#8D949C" stroke-opacity="0.16" stroke-width="0.7"/><path d="M-7.0 22.3 l-6.9 24.5" stroke="#8D949C" stroke-opacity="0.31" stroke-width="0.7"/><path d="M-2.0 211.4 l-7.2 25.7" stroke="#8D949C" stroke-opacity="0.27" stroke-width="0.7"/><path d="M51.1 133.6 l-3.4 12.1" stroke="#8D949C" stroke-opacity="0.12" stroke-width="0.7"/><path d="M212.4 161.9 l-5.2 18.4" stroke="#8D949C" stroke-opacity="0.33" stroke-width="0.7"/><path d="M72.8 224.1 l-6.5 23.2" stroke="#8D949C" stroke-opacity="0.17" stroke-width="0.7"/><path d="M25.5 62.0 l-3.9 13.8" stroke="#8D949C" stroke-opacity="0.25" stroke-width="0.7"/><path d="M27.4 97.3 l-3.4 12.1" stroke="#8D949C" stroke-opacity="0.33" stroke-width="0.7"/><path d="M52.0 108.3 l-5.4 19.3" stroke="#8D949C" stroke-opacity="0.33" stroke-width="0.7"/><path d="M69.4 237.0 l-5.0 18.0" stroke="#8D949C" stroke-opacity="0.24" stroke-width="0.7"/><path d="M96.1 -14.8 l-4.8 17.0" stroke="#8D949C" stroke-opacity="0.16" stroke-width="0.7"/><path d="M-39.0 203.8 l-3.6 12.8" stroke="#8D949C" stroke-opacity="0.23" stroke-width="0.7"/><path d="M148.6 135.8 l-4.3 15.2" stroke="#8D949C" stroke-opacity="0.24" stroke-width="0.7"/><path d="M104.4 199.6 l-3.3 11.7" stroke="#8D949C" stroke-opacity="0.25" stroke-width="0.7"/><path d="M24.6 57.5 l-6.3 22.4" stroke="#8D949C" stroke-opacity="0.24" stroke-width="0.7"/><path d="M106.0 192.8 l-6.9 24.6" stroke="#8D949C" stroke-opacity="0.22" stroke-width="0.7"/><path d="M119.3 121.6 l-5.1 18.2" stroke="#8D949C" stroke-opacity="0.28" stroke-width="0.7"/></g>
+
+    <!-- Cloak -->
+    <path d="M0 280 C4 232 26 200 66 184 L100 214 L134 184 C174 200 196 232 200 280 Z" fill="url(#cloth)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M40 210 C48 236 50 258 48 280 M160 210 C152 236 150 258 152 280 M78 200 C82 230 84 256 82 280" fill="none" stroke="#4A5057" stroke-width="1.1"/>
+    <!-- Harness strap -->
+    <path d="M58 194 L150 268" stroke="#262A2F" stroke-width="9"/>
+    <path d="M58 194 L150 268" stroke="#8D949C" stroke-width="0.8" stroke-dasharray="1 5"/>
+    <rect x="96" y="222" width="12" height="10" rx="2" transform="rotate(39 102 227)" fill="#0B0C0E" stroke="#EEF1F3" stroke-width="1.2"/>
+
+    <!-- Hood -->
+    <path d="M36 212 C30 170 40 120 56 90 C68 64 84 50 100 50 C116 50 132 64 144 90 C160 120 170 170 164 212 C146 198 124 190 100 190 C76 190 54 198 36 212 Z" fill="url(#clothL)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M58 92 C50 120 46 160 50 200" fill="none" stroke="#EEF1F3" stroke-opacity="0.7" stroke-width="1.2"/>
+    <path d="M142 92 C150 120 154 160 150 200" fill="none" stroke="#4A5057" stroke-width="1"/>
+    <!-- The hood's rolled rim around the face -->
+    <path d="M100 56 C124 56 136 82 135 106 C134 134 120 156 100 160 C80 156 66 134 65 106 C64 82 76 56 100 56 Z" fill="#1E2226" stroke="#EEF1F3" stroke-opacity="0.8" stroke-width="1.4"/>
+    <!-- The hollow, and the face in shadow -->
+    <path d="M100 62 C119 62 128 84 127 104 C126 128 114 148 100 150 C86 148 74 128 73 104 C72 84 81 62 100 62 Z" fill="#050607" stroke="#4A5057" stroke-width="1.2"/>
+    <path d="M100 74 C114 74 120 90 119 104 C118 122 110 136 100 138 C90 136 82 122 81 104 C80 90 86 74 100 74 Z" fill="#1A1D21"/>
+    <!-- Visor slit, glowing -->
+    <path d="M80 98 L120 98 L117 106 L83 106 Z" fill="#EEF1F3" fill-opacity="0.15"/>
+    <path d="M78 96 L122 96 L118 108 L82 108 Z" fill="#EEF1F3" fill-opacity="0.08"/>
+    <path d="M83 99 L117 99 L115 104 L85 104 Z" fill="#EEF1F3"/>
+    <path d="M104 101.5 H112" stroke="#0B0C0E" stroke-width="1.4"/>
+    <!-- Respirator -->
+    <path d="M86 116 L114 116 L110 134 L90 134 Z" fill="#262A2F" stroke="#8D949C" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M94 120 V130 M100 120 V131 M106 120 V130" stroke="#EEF1F3" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="86" cy="124" r="3.4" fill="#262A2F" stroke="#8D949C" stroke-width="1"/>
+    <circle cx="114" cy="124" r="3.4" fill="#262A2F" stroke="#8D949C" stroke-width="1"/>
+    <rect width="200" height="280" fill="url(#scan)"/>
+    <rect x="0" y="214" width="200" height="66" fill="url(#plate)"/>
+    <path d="M24 236 H176" stroke="#EEF1F3" stroke-opacity="0.35" stroke-width="0.8"/>
+    <path d="M52 256 H78 M122 256 H148" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1.2"/>
+    <g fill="none" stroke="#EEF1F3" stroke-width="2">
+      <circle cx="100" cy="253" r="10"/><path d="M100 237 V245 M100 261 V269 M84 253 H92 M108 253 H116"/>
+    </g>
+    <circle cx="100" cy="253" r="2.2" fill="#EEF1F3"/>
+  </g>
+</svg>

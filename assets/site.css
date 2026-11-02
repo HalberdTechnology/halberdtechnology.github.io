@@ -1,0 +1,176 @@
+/* Halberd Technology: shared tokens and components.
+   Revolution's palette: grayscale plus one cyan accent, text never gray, squared corners,
+   Orbitron for titles and Exo 2 for body text. */
+
+:root {
+  --surface: #0E0F11;
+  --container-low: #131518;
+  --container: #181A1D;
+  --container-high: #1F2226;
+  --container-highest: #2A2E33;
+  --outline: #5A6067;
+  --outline-variant: #30353A;
+  --text: #FFFFFF;
+  --primary: #6FE3EE;
+  --on-primary: #00363B;
+  --card-back: #8D9399;
+  --card-ink: #16181B;
+  --glow: rgba(111, 227, 238, 0.35);
+  --scrim: rgba(14, 15, 17, 0.82);
+
+  --title: "Orbitron", "Exo 2", system-ui, sans-serif;
+  --body: "Exo 2", system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --surface: #F1F2F4;
+    --container-low: #F8F9FA;
+    --container: #FFFFFF;
+    --container-high: #FBFBFC;
+    --container-highest: #E2E5E8;
+    --outline: #7A8086;
+    --outline-variant: #D3D7DB;
+    --text: #000000;
+    --primary: #007C86;
+    --on-primary: #FFFFFF;
+    --glow: rgba(0, 124, 134, 0.25);
+    --scrim: rgba(241, 242, 244, 0.86);
+    color-scheme: light;
+  }
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { font-family: var(--title); font-weight: 700; letter-spacing: 0.04em; line-height: 1.15; }
+
+/* Squared buttons with the lift-and-glow hover from the K-ov hero. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.85em 1.6em;
+  font: 600 0.95rem/1 var(--title);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: var(--container-high);
+  border: 1px solid var(--outline-variant);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s, border-color 0.25s, box-shadow 0.4s;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  width: 90%;
+  height: 10px;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, var(--glow) 0%, transparent 80%);
+  transition: transform 0.4s, opacity 0.4s;
+}
+.btn:hover, .btn:focus-visible { transform: translateY(-5px); border-color: var(--primary); text-decoration: none; }
+.btn:hover::before, .btn:focus-visible::before { opacity: 1; transform: translateY(5px); }
+.btn.primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.btn.primary:hover { box-shadow: 0 0 32px var(--glow); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.kicker {
+  font: 600 0.78rem/1 var(--title);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Revolution cards: the app's flat gray card with dark ink art. */
+.card {
+  aspect-ratio: 200 / 280;
+  background: var(--card-back) center / 100% 100% no-repeat;
+  border-radius: 6%;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--outline-variant);
+  background: var(--container-low);
+  padding: 3rem 1rem 2rem;
+}
+.site-footer .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 2rem;
+}
+.site-footer .brand { display: flex; align-items: center; gap: 0.75rem; font: 700 1rem var(--title); letter-spacing: 0.14em; color: var(--text); }
+.site-footer .brand img { width: 40px; height: 40px; border-radius: 4px; }
+.site-footer p { margin-top: 0.75rem; font-size: 0.92rem; }
+.site-footer h4 { font: 600 0.75rem/1 var(--title); letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 1rem; }
+.site-footer ul { list-style: none; display: grid; gap: 0.5rem; font-size: 0.95rem; }
+.site-footer ul a { color: var(--text); }
+.site-footer ul a:hover { color: var(--primary); }
+.site-footer .legal { max-width: 1100px; margin: 2.5rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--outline-variant); font-size: 0.85rem; }
+@media (max-width: 760px) { .site-footer .inner { grid-template-columns: 1fr 1fr; } .site-footer .inner > :first-child { grid-column: 1 / -1; } }
+
+/* Top bar for inner pages */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  background: var(--scrim);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--outline-variant);
+}
+.topbar .brand { display: flex; align-items: center; gap: 0.6rem; color: var(--text); font: 700 0.9rem var(--title); letter-spacing: 0.16em; }
+.topbar .brand:hover { text-decoration: none; }
+.topbar .brand img { width: 30px; height: 30px; border-radius: 4px; }
+.topbar nav { display: flex; gap: 1.25rem; font: 600 0.75rem var(--title); letter-spacing: 0.16em; text-transform: uppercase; }
+.topbar nav a { color: var(--text); }
+.topbar nav a:hover, .topbar nav a[aria-current] { color: var(--primary); text-decoration: none; }
+
+/* Long-form documents (privacy policy) */
+.doc { max-width: 760px; margin: 0 auto; padding: 4rem 1rem 5rem; }
+.doc h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0.75rem 0 0.5rem; }
+.doc .meta { margin-bottom: 2.5rem; }
+.doc h2 { font-size: 1.15rem; margin: 2.5rem 0 0.75rem; color: var(--primary); }
+.doc p, .doc li { margin-bottom: 0.9rem; }
+.doc ul { padding-left: 1.4rem; }
+.doc .summary { background: var(--container); border: 1px solid var(--outline-variant); border-left: 3px solid var(--primary); border-radius: 4px; padding: 1.25rem 1.5rem; }
+.doc .summary ul { margin-top: 0.5rem; }
+.doc table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+.doc th, .doc td { text-align: left; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--outline-variant); vertical-align: top; }
+.doc th { font: 600 0.72rem var(--title); letter-spacing: 0.16em; text-transform: uppercase; }
+@media (max-width: 560px) { .doc table, .doc tbody, .doc tr, .doc td { display: block; } .doc thead { display: none; } .doc td:first-child { font-weight: 600; border-bottom: 0; padding-bottom: 0; } }
+
+@keyframes rise { from { opacity: 0; transform: translateY(-30%); } to { opacity: 1; transform: none; } }
+@keyframes riseLate { 0%, 45% { opacity: 0; transform: translateY(-24px); } 100% { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

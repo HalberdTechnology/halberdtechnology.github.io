@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halberd Technology</title>
+  <meta name="description" content="Halberd Technology makes small, sharp games. Our first is Revolution, a bluffing card game where every player uses their own phone.">
+  <meta name="theme-color" content="#040405">
+  <meta property="og:title" content="Halberd Technology">
+  <meta property="og:image" content="https://halberdtechnology.github.io/assets/avatar.png">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    /* Concept B, "Signal": the K-ov hero layout (fixed full-screen shader, huge centered
+       wordmark, lifting buttons) but the background is Revolution's own scene: the dusk sky
+       gradient, the scanline sun from the card back, and a city skyline, in a custom shader. */
+    #sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; background: linear-gradient(#040405, #25282C 70%, #101113); }
+    main { position: relative; z-index: 2; }
+    .hero { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 16svh 1rem 2rem; text-align: center; }
+    .hero .kicker { animation: riseLate 1s ease-in-out; }
+    .hero h1 { margin: 1.25rem 0 0.5rem; font-size: clamp(3rem, 14vw, 13rem); font-weight: 900; letter-spacing: 0.08em; line-height: 1; animation: rise 0.8s ease-in-out; }
+    .hero h1 span { color: var(--primary); text-shadow: 0 0 40px var(--glow); }
+    .hero p { max-width: 34rem; margin: 0.5rem auto 2.25rem; font-size: 1.1rem; animation: riseLate 1.2s ease-in-out; text-shadow: 0 2px 16px #000, 0 0 2px #000; }
+    .hero .btn-row { justify-content: center; animation: riseLate 1.4s ease-in-out; }
+    .strip { padding: 6rem 1rem; background: linear-gradient(transparent, var(--surface) 22%); }
+    .strip .inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center; }
+    .strip h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0.75rem 0 1rem; }
+    .strip p { margin-bottom: 1.75rem; font-size: 1.08rem; }
+    .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.9rem; perspective: 900px; }
+    .row .card { transform: rotateX(8deg); transition: transform 0.45s cubic-bezier(.2,.8,.2,1), box-shadow 0.45s; }
+    .row .card:hover { transform: translateY(-14px) rotateX(0); box-shadow: 0 24px 50px rgba(0,0,0,0.6), 0 0 0 1px var(--primary), 0 0 30px var(--glow); }
+    .row figcaption { margin-top: 0.6rem; text-align: center; font: 600 0.68rem var(--title); letter-spacing: 0.18em; text-transform: uppercase; }
+    @media (max-width: 860px) { .strip .inner { grid-template-columns: 1fr; } .row { grid-template-columns: repeat(5, minmax(96px, 1fr)); overflow-x: auto; padding-bottom: 1rem; } }
+  </style>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <main>
+    <section class="hero">
+      <span class="kicker">Halberd Technology</span>
+      <h1>HALB<span>E</span>RD</h1>
+      <p>Small, sharp games built in Rust and shaded by hand. One idea each, done properly.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="/revolution/">Revolution</a>
+        <a class="btn" href="https://github.com/HalberdTechnology">GitHub</a>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="inner">
+        <div>
+          <span class="kicker">Now playing</span>
+          <h2>Revolution</h2>
+          <p>Five roles, two cards each, and nobody can see your hand. Claim whatever you want. Every player is on their own phone, so the table is wherever you are.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="/revolution/">See the game</a>
+            <a class="btn" href="/revolution/privacy/">Privacy</a>
+          </div>
+        </div>
+        <div class="row">
+          <figure><div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div><figcaption>Magnate</figcaption></figure>
+          <figure><div class="card" style="background-image:url(/assets/cards/operative.svg)"></div><figcaption>Operative</figcaption></figure>
+          <figure><div class="card" style="background-image:url(/assets/cards/enforcer.svg)"></div><figcaption>Enforcer</figcaption></figure>
+          <figure><div class="card" style="background-image:url(/assets/cards/broker.svg)"></div><figcaption>Broker</figcaption></figure>
+          <figure><div class="card" style="background-image:url(/assets/cards/sentinel.svg)"></div><figcaption>Sentinel</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games. Built in Rust, shaded by hand.</p></div>
+      <div><h4>Revolution</h4><ul><li><a href="/revolution/">Overview</a></li><li><a href="/revolution/#support">Support</a></li><li><a href="/revolution/privacy/">Privacy policy</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li><li><a href="/concepts/">Site concepts</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="https://github.com/HalberdTechnology/halberdtechnology.github.io/issues">Open an issue</a></li></ul></div>
+    </div>
+    <div class="legal">© 2026 Halberd Technology</div>
+  </footer>
+
+  <script>
+    // Dusk sky, scanline sun and skyline, drawn in one fragment shader. The mouse tilts the sun.
+    (function () {
+      const c = document.getElementById("sky");
+      const gl = c.getContext("webgl");
+      if (!gl) return;
+      const vs = "attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}";
+      const fs = `
+precision mediump float;
+uniform vec2 r; uniform float t; uniform vec2 m;
+float h(float x){return fract(sin(x*127.1)*43758.5);}
+float n(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}
+void main(){
+  vec2 uv=gl_FragCoord.xy/r; float a=r.x/r.y;
+  vec3 top=vec3(.016,.016,.02), mid=vec3(.145,.157,.173), bot=vec3(.063,.067,.075);
+  float hz=.22;
+  vec3 col=mix(mid,top,smoothstep(hz,1.,uv.y));
+  col=mix(bot,col,smoothstep(hz-.1,hz,uv.y));
+  vec2 sc=vec2(.5+m.x*.04,hz+.1+m.y*.02);
+  vec2 d=(uv-sc)*vec2(a,1.); float rr=length(d); float R=.16*min(1.,a*1.5);
+  float slit=step(.5,fract((uv.y-sc.y)*60.+t*.4));
+  float lower=smoothstep(.02,-.12,uv.y-sc.y);
+  float disc=smoothstep(R,R-.004,rr)*(1.-lower*slit);
+  vec3 cy=vec3(.435,.89,.933);
+  col+=cy*.55*exp(-rr*rr*14.);
+  col=mix(col,mix(cy,vec3(1.),smoothstep(-.2,.2,uv.y-sc.y)*.35),disc);
+  float x=uv.x*a*14.; float id=floor(x);
+  float bh=hz-.02+h(id)*.11*(.4+.6*smoothstep(0.,.5,abs(uv.x-.5)));
+  float bld=step(uv.y,bh)*step(uv.y,hz+.12);
+  float win=step(.86,n(floor(vec2(x*3.,uv.y*120.))))*step(.04,fract(x));
+  vec3 city=vec3(.035,.038,.043)+cy*win*.35*step(uv.y,bh-.01)*(.6+.4*sin(t+id));
+  col=mix(col,city,bld*step(hz-.13,uv.y));
+  float ring=abs(rr-R-.06); col+=cy*.12*smoothstep(.004,0.,ring)*step(.5,fract(atan(d.y,d.x)*12.+t*.1));
+  col+=(n(gl_FragCoord.xy+t)-.5)*.035;
+  col*=1.-.55*length((uv-.5)*vec2(1.,.8));
+  gl_FragColor=vec4(col,1.);
+}`;
+      function sh(type, src) { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; }
+      const pr = gl.createProgram();
+      gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs));
+      gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs));
+      gl.linkProgram(pr);
+      gl.useProgram(pr);
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(pr, "p");
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+      const ur = gl.getUniformLocation(pr, "r"), ut = gl.getUniformLocation(pr, "t"), um = gl.getUniformLocation(pr, "m");
+      const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let mx = 0, my = 0, tx = 0, ty = 0;
+      addEventListener("pointermove", e => { tx = e.clientX / innerWidth * 2 - 1; ty = 1 - e.clientY / innerHeight * 2; });
+      function size() { const d = Math.min(devicePixelRatio, 1.5); c.width = innerWidth * d; c.height = innerHeight * d; gl.viewport(0, 0, c.width, c.height); }
+      addEventListener("resize", size); size();
+      function frame(ms) {
+        mx += (tx - mx) * 0.05; my += (ty - my) * 0.05;
+        gl.uniform2f(ur, c.width, c.height); gl.uniform1f(ut, still ? 0 : ms / 1000); gl.uniform2f(um, mx, my);
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+        if (!still) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

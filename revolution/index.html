@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revolution</title>
+  <meta name="description" content="Revolution is a bluffing card game for 2 to 6 players where everyone plays on their own iPhone. Claim any role, call out liars, and be the last one standing.">
+  <meta name="theme-color" content="#0E0F11">
+  <meta property="og:title" content="Revolution by Halberd Technology">
+  <meta property="og:description" content="A bluffing card game where every player uses their own phone.">
+  <meta property="og:image" content="https://halberdtechnology.github.io/assets/avatar.png">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+    .hero { padding: 6rem 0 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); font-weight: 900; letter-spacing: 0.04em; margin: 0.75rem 0 1rem; animation: rise 0.8s ease-in-out; }
+    .hero .lede { font-size: 1.2rem; max-width: 32rem; margin-bottom: 2rem; }
+    .badge { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.7rem 1.2rem; border: 1px solid var(--outline); border-radius: 4px; font: 600 0.8rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; }
+    .badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 12px var(--primary); }
+    .fan { position: relative; height: 400px; }
+    .fan .card { position: absolute; width: 180px; left: 50%; top: 50%; transition: transform 0.5s cubic-bezier(.2,.8,.2,1); }
+    .fan .card:nth-child(1) { transform: translate(-50%,-50%) translateX(-100px) rotate(-14deg); }
+    .fan .card:nth-child(2) { transform: translate(-50%,-50%) translateY(-16px); z-index: 2; }
+    .fan .card:nth-child(3) { transform: translate(-50%,-50%) translateX(100px) rotate(14deg); }
+    section.block { padding: 4.5rem 0; border-top: 1px solid var(--outline-variant); }
+    section.block > h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0.75rem 0 2rem; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .features > div { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.5rem; }
+    .features h3 { font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .roles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .roles .card { margin-bottom: 0.9rem; }
+    .roles h3 { font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; }
+    .roles p { font-size: 0.92rem; margin-top: 0.3rem; }
+    .roles .act { color: var(--primary); font-weight: 600; }
+    .steps { counter-reset: s; display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+    .steps li { list-style: none; counter-increment: s; background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.25rem 1.5rem 1.25rem 4rem; position: relative; }
+    .steps li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 1.25rem; top: 1.2rem; font: 900 1.1rem var(--title); color: var(--primary); }
+    details { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.1rem 1.4rem; margin-bottom: 0.75rem; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin-top: 0.75rem; }
+    .contact { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; padding-top: 3.5rem; } .fan { height: 320px; } .fan .card { width: 140px; }
+      .features, .steps { grid-template-columns: 1fr; }
+      .roles { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a>
+    <nav><a href="/revolution/" aria-current="page">Revolution</a><a href="#support">Support</a><a href="/revolution/privacy/">Privacy</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="kicker">A bluffing card game for 2 to 6 players</span>
+        <h1>REVOLUTION</h1>
+        <p class="lede">Everyone gets two secret cards and their own phone. Claim any role you like, call out the liars, and be the last one standing.</p>
+        <span class="badge">Coming soon to the App Store</span>
+      </div>
+      <div class="fan" aria-hidden="true">
+        <div class="card" style="background-image:url(/assets/cards/operative.svg)"></div>
+        <div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div>
+        <div class="card" style="background-image:url(/assets/cards/broker.svg)"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">Why it plays well</span>
+      <h2>Built for the back seat</h2>
+      <div class="features">
+        <div><h3>One phone each</h3><p>Your hand lives on your screen and nowhere else. One phone hosts, the others join with a short room code.</p></div>
+        <div><h3>Practice against bots</h3><p>Learn the bluffs on your own before the road trip, then bring them to the table.</p></div>
+        <div><h3>Quick rounds</h3><p>Ten minutes a game. The rules fit on one card and the arguments last the whole drive.</p></div>
+        <div><h3>No accounts, no ads</h3><p>Pick a callsign and play. Nothing to sign up for and nothing tracking you.</p></div>
+        <div><h3>Light and dark</h3><p>A clean monochrome table with one cyan accent, hand-drawn card art and synthesized sound.</p></div>
+        <div><h3>Native and fast</h3><p>Written in Rust with custom shaders. A small download that runs smoothly.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">The court</span>
+      <h2>Five roles. Claim any of them.</h2>
+      <div class="roles">
+        <div><div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div><h3>Magnate</h3><p><span class="act">Levy:</span> take 3 coins. Blocks foreign aid.</p></div>
+        <div><div class="card" style="background-image:url(/assets/cards/operative.svg)"></div><h3>Operative</h3><p><span class="act">Eliminate:</span> pay 3, a target loses a card.</p></div>
+        <div><div class="card" style="background-image:url(/assets/cards/enforcer.svg)"></div><h3>Enforcer</h3><p><span class="act">Extort:</span> take 2 coins from a player. Blocks extortion.</p></div>
+        <div><div class="card" style="background-image:url(/assets/cards/broker.svg)"></div><h3>Broker</h3><p><span class="act">Swap:</span> draw 2, keep the best. Blocks extortion.</p></div>
+        <div><div class="card" style="background-image:url(/assets/cards/sentinel.svg)"></div><h3>Sentinel</h3><p>Blocks an elimination aimed at you.</p></div>
+      </div>
+      <p style="margin-top:2rem">Save up seven coins and you can <strong>Purge</strong> any player, no questions asked. Get caught lying and you lose a card. Lose both and you are out.</p>
+    </section>
+
+    <section class="block" id="support">
+      <span class="kicker">Support</span>
+      <h2>Getting a game going</h2>
+      <ol class="steps">
+        <li>Everyone installs Revolution and picks a callsign.</li>
+        <li>One player taps <strong>Host game</strong> and reads out the room code.</li>
+        <li>Everyone else taps <strong>Join game</strong> and types the code.</li>
+        <li>The host starts the round once everyone is in.</li>
+      </ol>
+
+      <h2 style="margin-top:3.5rem">Questions</h2>
+      <details><summary>Do we need internet?</summary><p>Yes. Online games connect through our relay server, so each phone needs mobile data or Wi-Fi. A steady connection gives the best game, so expect the odd hiccup in tunnels.</p></details>
+      <details><summary>How many people can play?</summary><p>Two to six. You can also play solo against bots.</p></details>
+      <details><summary>Why does it ask for local network access?</summary><p>So phones on the same Wi-Fi or hotspot can find each other directly. It is only used to connect to other players' phones.</p></details>
+      <details><summary>Is it on Android?</summary><p>Not yet. Revolution is iPhone-only for now.</p></details>
+      <details><summary>What does the app collect?</summary><p>Nothing that identifies you. The details are in the <a href="/revolution/privacy/">privacy policy</a>.</p></details>
+
+      <div class="contact">
+        <p>Found a bug or need a hand?</p>
+        <a class="btn primary" href="https://github.com/HalberdTechnology/halberdtechnology.github.io/issues/new?title=Revolution%20support">Contact support</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games. Built in Rust, shaded by hand.</p></div>
+      <div><h4>Revolution</h4><ul><li><a href="/revolution/">Overview</a></li><li><a href="/revolution/#support">Support</a></li><li><a href="/revolution/privacy/">Privacy policy</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="https://github.com/HalberdTechnology/halberdtechnology.github.io/issues">Open an issue</a></li></ul></div>
+    </div>
+    <div class="legal">© 2026 Halberd Technology</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+  <!-- Broker: undercut, lit lenses, headset; circuit traces and two cards trading places -->
+  <defs>
+    <clipPath id="card"><rect width="200" height="280" rx="18"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3036"/><stop offset="0.6" stop-color="#121417"/><stop offset="1" stop-color="#08090A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="100" cy="90" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A9B0B8" stop-opacity="0.3"/><stop offset="1" stop-color="#A9B0B8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14171A"/><stop offset="0.62" stop-color="#2A2F34"/><stop offset="1" stop-color="#6B727A"/>
+    </linearGradient>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B0C0E"/><stop offset="0.7" stop-color="#1B1F23"/><stop offset="1" stop-color="#3B4148"/>
+    </linearGradient>
+    <linearGradient id="clothL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3B4148"/><stop offset="0.3" stop-color="#1B1F23"/><stop offset="1" stop-color="#0B0C0E"/>
+    </linearGradient>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1" fill="#000" fill-opacity="0.22"/>
+    </pattern>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08090A" stop-opacity="0"/><stop offset="0.35" stop-color="#08090A" stop-opacity="0.92"/>
+    </linearGradient>
+    <radialGradient id="lensB" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.6" stop-color="#9AA1A9"/><stop offset="1" stop-color="#3B4148"/>
+    </radialGradient>
+    <linearGradient id="holo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DDE2E6" stop-opacity="0.35"/><stop offset="1" stop-color="#DDE2E6" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="200" height="280" fill="url(#bg)"/>
+    <g fill="none" stroke="#4A5057" stroke-width="0.9" stroke-linejoin="round" opacity="0.8"><path d="M112 136 L96 136 L96 152 L112 152"/><circle cx="112" cy="152" r="1.8" fill="#8D949C" stroke="none"/><path d="M16 136 L16 160 L16 144 L16 128 L-16 128"/><circle cx="-16" cy="128" r="1.8" fill="#8D949C" stroke="none"/><path d="M0 192 L-32 192 L-8 192 L-32 192"/><circle cx="-32" cy="192" r="1.8" fill="#8D949C" stroke="none"/><path d="M160 64 L160 40 L128 40 L96 40"/><circle cx="96" cy="40" r="1.8" fill="#8D949C" stroke="none"/><path d="M192 24 L216 24 L184 24 L168 24"/><circle cx="168" cy="24" r="1.8" fill="#8D949C" stroke="none"/><path d="M120 96 L88 96 L88 120 L104 120 L104 104"/><circle cx="104" cy="104" r="1.8" fill="#8D949C" stroke="none"/><path d="M56 176 L80 176 L56 176"/><circle cx="56" cy="176" r="1.8" fill="#8D949C" stroke="none"/><path d="M128 48 L128 72 L144 72 L160 72 L192 72"/><circle cx="192" cy="72" r="1.8" fill="#8D949C" stroke="none"/><path d="M160 144 L144 144 L112 144"/><circle cx="112" cy="144" r="1.8" fill="#8D949C" stroke="none"/><path d="M80 208 L64 208 L48 208 L48 232"/><circle cx="48" cy="232" r="1.8" fill="#8D949C" stroke="none"/><path d="M32 144 L32 120 L8 120 L8 104"/><circle cx="8" cy="104" r="1.8" fill="#8D949C" stroke="none"/><path d="M40 184 L40 160 L40 136 L24 136 L24 152"/><circle cx="24" cy="152" r="1.8" fill="#8D949C" stroke="none"/><path d="M184 176 L208 176 L208 160 L184 160"/><circle cx="184" cy="160" r="1.8" fill="#8D949C" stroke="none"/><path d="M48 48 L72 48 L56 48 L88 48 L88 32"/><circle cx="88" cy="32" r="1.8" fill="#8D949C" stroke="none"/><path d="M88 32 L88 16 L88 40 L88 24"/><circle cx="88" cy="24" r="1.8" fill="#8D949C" stroke="none"/><path d="M152 160 L176 160 L160 160"/><circle cx="160" cy="160" r="1.8" fill="#8D949C" stroke="none"/><path d="M112 136 L112 112 L128 112 L128 128"/><circle cx="128" cy="128" r="1.8" fill="#8D949C" stroke="none"/><path d="M120 144 L120 168 L120 152"/><circle cx="120" cy="152" r="1.8" fill="#8D949C" stroke="none"/><path d="M16 160 L16 184 L40 184"/><circle cx="40" cy="184" r="1.8" fill="#8D949C" stroke="none"/><path d="M112 208 L88 208 L88 224 L64 224 L64 248"/><circle cx="64" cy="248" r="1.8" fill="#8D949C" stroke="none"/><path d="M0 88 L-32 88 L0 88 L0 104"/><circle cx="0" cy="104" r="1.8" fill="#8D949C" stroke="none"/><path d="M80 96 L96 96 L96 112 L96 128 L120 128"/><circle cx="120" cy="128" r="1.8" fill="#8D949C" stroke="none"/><path d="M8 176 L8 192 L32 192"/><circle cx="32" cy="192" r="1.8" fill="#8D949C" stroke="none"/><path d="M48 208 L80 208 L104 208 L80 208"/><circle cx="80" cy="208" r="1.8" fill="#8D949C" stroke="none"/><path d="M152 8 L152 32 L152 16 L136 16 L136 32"/><circle cx="136" cy="32" r="1.8" fill="#8D949C" stroke="none"/><path d="M192 32 L192 8 L208 8"/><circle cx="208" cy="8" r="1.8" fill="#8D949C" stroke="none"/></g>
+    <rect width="200" height="280" fill="url(#halo)"/>
+    <!-- Two cards in flight, trading places -->
+    <g transform="rotate(-14 36 96)">
+      <rect x="18" y="70" width="36" height="50" rx="4" fill="url(#holo)" stroke="#EEF1F3" stroke-width="1.4"/>
+      <rect x="23" y="75" width="26" height="40" rx="2" fill="none" stroke="#EEF1F3" stroke-opacity="0.4" stroke-width="0.8"/>
+      <path d="M36 86 L44 95 L36 104 L28 95 Z" fill="none" stroke="#EEF1F3" stroke-width="1"/>
+    </g>
+    <g transform="rotate(12 164 96)">
+      <rect x="146" y="70" width="36" height="50" rx="4" fill="url(#holo)" stroke="#EEF1F3" stroke-width="1.4"/>
+      <rect x="151" y="75" width="26" height="40" rx="2" fill="none" stroke="#EEF1F3" stroke-opacity="0.4" stroke-width="0.8"/>
+      <path d="M164 86 L172 95 L164 104 L156 95 Z" fill="none" stroke="#EEF1F3" stroke-width="1"/>
+    </g>
+    <path d="M48 58 C72 26 128 26 152 58" fill="none" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M152 58 L144 56 M152 58 L150 50" stroke="#EEF1F3" stroke-opacity="0.8" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M152 134 C128 166 72 166 48 134" fill="none" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M48 134 L56 136 M48 134 L50 142" stroke="#EEF1F3" stroke-opacity="0.8" stroke-width="1.4" stroke-linecap="round"/>
+
+    <!-- Body: a jacket with a data collar -->
+    <path d="M12 280 C14 230 36 202 72 190 L100 204 L128 190 C164 202 186 230 188 280 Z" fill="url(#cloth)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M100 204 V280" stroke="#4A5057" stroke-width="1.2"/>
+    <path d="M72 190 C76 214 84 232 96 246 M128 190 C124 214 116 232 104 246" fill="none" stroke="#8D949C" stroke-width="1.2"/>
+    <path d="M130 194 C160 204 180 224 186 256" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="1.2"/>
+    <!-- Neck, ports and cables -->
+    <path d="M88 140 L112 140 L114 182 L86 182 Z" fill="#1A1D21"/>
+    <path d="M112 142 L114 180" stroke="#6B727A" stroke-width="1.4"/>
+    <path d="M80 176 C86 186 114 186 120 176 L126 192 C116 200 84 200 74 192 Z" fill="#262A2F" stroke="#EEF1F3" stroke-width="1.6" stroke-linejoin="round"/>
+    <g fill="#EEF1F3"><circle cx="88" cy="190" r="1.6"/><circle cx="100" cy="193" r="1.6"/><circle cx="112" cy="190" r="1.6"/></g>
+    <path d="M106 158 C118 164 126 176 132 196 C136 212 134 228 128 244" fill="none" stroke="#EEF1F3" stroke-width="1.6"/>
+    <path d="M110 158 C124 166 134 180 138 200" fill="none" stroke="#8D949C" stroke-width="1.2"/>
+    <rect x="102" y="152" width="9" height="9" rx="2" fill="#0B0C0E" stroke="#EEF1F3" stroke-width="1.2"/>
+
+    <!-- Head -->
+    <path d="M100 56 C122 56 131 74 130 98 C129 122 116 140 100 140 C84 140 71 122 70 98 C69 74 78 56 100 56 Z" fill="url(#skin)" stroke="#EEF1F3" stroke-width="2"/>
+    <path d="M70 100 C71 122 83 138 100 140 C89 132 81 118 79 100 Z" fill="#0B0C0E" fill-opacity="0.55"/>
+    <path d="M130 94 C130 118 120 134 104 140" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-opacity="0.85"/>
+    <!-- Undercut: cropped top, shaved sides -->
+    <path d="M70 92 C66 62 82 46 102 46 C124 46 136 60 131 88 L126 72 C112 66 92 64 76 72 Z" fill="#0B0C0E" stroke="#EEF1F3" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M78 60 L120 52 M76 68 L126 60 M90 50 L128 66" stroke="#8D949C" stroke-width="0.9"/>
+    <path d="M70 92 C70 84 72 78 76 72 M131 88 C130 82 128 76 126 72" fill="none" stroke="#4A5057" stroke-width="3" stroke-dasharray="1 1.4"/>
+    <!-- Glasses -->
+    <path d="M76 92 H96 L94 106 H79 Z" fill="url(#lensB)" stroke="#EEF1F3" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M104 92 H124 L121 106 H106 Z" fill="url(#lensB)" stroke="#EEF1F3" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M96 95 H104" stroke="#EEF1F3" stroke-width="1.8"/>
+    <path d="M80 97 H90 M108 97 H118 M80 101 H86 M108 101 H114" stroke="#0B0C0E" stroke-opacity="0.55" stroke-width="1"/>
+    <path d="M100 108 L97 118 L102 119" fill="none" stroke="#8D949C" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M91 127 C97 128.5 104 128.5 110 126" fill="none" stroke="#EEF1F3" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Headset and mic -->
+    <path d="M64 96 C60 52 84 34 100 34 C116 34 140 52 136 96" fill="none" stroke="#EEF1F3" stroke-width="3.2"/>
+    <path d="M64 96 C60 52 84 34 100 34 C116 34 140 52 136 96" fill="none" stroke="#0B0C0E" stroke-width="1"/>
+    <rect x="58" y="88" width="14" height="24" rx="5" fill="#262A2F" stroke="#EEF1F3" stroke-width="1.8"/>
+    <rect x="128" y="88" width="14" height="24" rx="5" fill="#3B4148" stroke="#EEF1F3" stroke-width="1.8"/>
+    <path d="M131 94 H139 M131 100 H139 M131 106 H139" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1"/>
+    <path d="M65 112 C66 128 76 134 88 132" fill="none" stroke="#EEF1F3" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="86" y="129" width="7" height="5" rx="2" fill="#EEF1F3"/>
+    <rect width="200" height="280" fill="url(#scan)"/>
+    <rect x="0" y="214" width="200" height="66" fill="url(#plate)"/>
+    <path d="M24 236 H176" stroke="#EEF1F3" stroke-opacity="0.35" stroke-width="0.8"/>
+    <path d="M52 256 H78 M122 256 H148" stroke="#EEF1F3" stroke-opacity="0.6" stroke-width="1.2"/>
+    <g fill="none" stroke="#EEF1F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M92 249.5 H108 M92 256.5 H108 M92 244 L84 253 L92 262 M108 244 L116 253 L108 262"/>
+    </g>
+  </g>
+</svg>
