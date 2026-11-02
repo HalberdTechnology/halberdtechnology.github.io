@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 1000">
+  <!-- Full halberd, head up: spike, cyan axe blade, gray back hook, langets, collars and shaft. -->
+  <defs>
+    <linearGradient id="steel" x1="0" x2="1">
+      <stop offset="0" stop-color="#C9CED3"/>
+      <stop offset="0.5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#8D9399"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0" stop-color="#2E8F99"/>
+      <stop offset="0.55" stop-color="#6FE3EE"/>
+      <stop offset="1" stop-color="#C8F6FA"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" x2="1">
+      <stop offset="0" stop-color="#2A2E33"/>
+      <stop offset="0.5" stop-color="#5A6067"/>
+      <stop offset="1" stop-color="#1F2226"/>
+    </linearGradient>
+  </defs>
+  <!-- shaft -->
+  <rect x="113" y="300" width="14" height="680" fill="url(#wood)"/>
+  <rect x="109" y="968" width="22" height="26" rx="2" fill="url(#steel)"/>
+  <!-- spike -->
+  <path d="M120 0 L134 168 L120 182 L106 168 Z" fill="url(#steel)"/>
+  <path d="M120 10 L120 176" stroke="#8D9399" stroke-width="1.5"/>
+  <!-- socket -->
+  <rect x="110" y="176" width="20" height="150" fill="url(#steel)"/>
+  <!-- axe blade with a cyan cutting edge -->
+  <path d="M130 196 L196 150 Q248 254 196 360 L130 316 Z" fill="url(#steel)"/>
+  <path d="M188 156 Q236 254 188 354 L196 360 Q248 254 196 150 Z" fill="url(#edge)"/>
+  <circle cx="156" cy="256" r="9" fill="none" stroke="#5A6067" stroke-width="3"/>
+  <!-- back hook -->
+  <path d="M110 214 L28 196 Q20 194 26 202 Q56 238 46 286 L110 268 Z" fill="url(#steel)"/>
+  <path d="M110 230 L52 222" stroke="#8D9399" stroke-width="2"/>
+  <!-- langets and collars -->
+  <rect x="112" y="326" width="16" height="110" fill="#8D9399"/>
+  <rect x="104" y="330" width="32" height="10" fill="url(#steel)"/>
+  <rect x="106" y="348" width="28" height="4" fill="url(#steel)"/>
+  <rect x="106" y="430" width="28" height="8" fill="url(#steel)"/>
+  <!-- grip wrap -->
+  <g stroke="#0E0F11" stroke-width="2" opacity="0.6">
+    <path d="M113 620 L127 610 M113 640 L127 630 M113 660 L127 650 M113 680 L127 670 M113 700 L127 690 M113 720 L127 710"/>
+  </g>
+</svg>

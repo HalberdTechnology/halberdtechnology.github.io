@@ -8,7 +8,7 @@ The Halberd Technology website, served by GitHub Pages at <https://halberdtechno
 | `/revolution/` | Revolution overview | Marketing URL |
 | `/revolution/#support` | Revolution support and FAQ | Support URL |
 | `/revolution/privacy/` | Revolution privacy policy | Privacy Policy URL |
-| `/concepts/` | Three landing page concepts (A Halo, B Signal, C Dossier) | |
+| `/concepts/` | Three landing page concepts (A Halo, B Glint, C Armoury) | |
 
 `index.html` is a copy of the chosen concept. Shared tokens, buttons and the footer live in `assets/site.css`.
 The card art in `assets/cards/` comes from the Revolution repo.

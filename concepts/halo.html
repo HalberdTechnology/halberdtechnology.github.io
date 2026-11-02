@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Halberd Technology</title>
-  <meta name="description" content="Halberd Technology makes small, sharp games. Our first is Revolution, a bluffing card game where every player uses their own phone.">
+  <meta name="description" content="Halberd Technology is a studio of small, sharp games. Revolution is the first of many.">
   <meta name="theme-color" content="#0E0F11">
   <meta property="og:title" content="Halberd Technology">
   <meta property="og:image" content="https://halberdtechnology.github.io/assets/avatar.png">
@@ -14,28 +14,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <style>
-    /* Concept A, "Halo": the K-ov hero almost as-is (full-screen Vanta halo, giant wordmark,
-       lifting buttons) recolored to Revolution's black, white and cyan. */
+    /* Concept A, "Halo": the K-ov hero (fixed Vanta halo, giant wordmark, lifting buttons) with a
+       full halberd standing behind the wordmark and the cyan halo ringing its blade. */
     #vanta { position: fixed; inset: 0; z-index: 0; pointer-events: none; filter: grayscale(1) brightness(1.25); }
     .tint { position: fixed; inset: 0; z-index: 1; pointer-events: none; background: #6FE3EE; mix-blend-mode: multiply; }
-    #vanta::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(14,15,17,0.75) 100%); }
     main { position: relative; z-index: 2; }
-    .hero { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1rem; }
-    .hero h1 { font-size: clamp(3rem, 15vw, 15rem); font-weight: 900; letter-spacing: 0.06em; line-height: 1; animation: rise 0.8s ease-in-out; }
-    .hero .sub { margin: 1rem 0 2.5rem; font: 500 clamp(0.75rem, 1.6vw, 1rem) var(--title); letter-spacing: 0.6em; text-transform: uppercase; animation: riseLate 1.2s ease-in-out; }
-    .hero .btn-row { justify-content: center; animation: riseLate 1.4s ease-in-out; }
-    .scroll-hint { position: absolute; bottom: 2rem; left: 50%; translate: -50% 0; font: 600 0.7rem var(--title); letter-spacing: 0.3em; color: var(--text); opacity: 0.8; }
-    .panel { max-width: 1000px; margin: 0 auto 6rem; padding: 3rem; background: rgba(14,15,17,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(111,227,238,0.45); border-radius: 4px; box-shadow: 0 20px 60px rgba(111,227,238,0.12); display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
-    .panel h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0.75rem 0 1rem; text-shadow: 0 0 24px var(--glow); }
-    .panel p { margin-bottom: 1.75rem; font-size: 1.08rem; }
-    .fan { position: relative; height: 340px; }
-    .fan .card { position: absolute; width: 170px; left: 50%; top: 50%; transition: transform 0.5s cubic-bezier(.2,.8,.2,1); }
-    .fan .card:nth-child(1) { transform: translate(-50%,-50%) translateX(-90px) rotate(-14deg); }
-    .fan .card:nth-child(2) { transform: translate(-50%,-50%) translateY(-14px); z-index: 2; }
-    .fan .card:nth-child(3) { transform: translate(-50%,-50%) translateX(90px) rotate(14deg); }
-    .fan:hover .card:nth-child(1) { transform: translate(-50%,-50%) translateX(-120px) rotate(-20deg); }
-    .fan:hover .card:nth-child(3) { transform: translate(-50%,-50%) translateX(120px) rotate(20deg); }
-    @media (max-width: 760px) { .panel { grid-template-columns: 1fr; padding: 2rem 1.25rem; margin: 0 1rem 4rem; } .fan { height: 280px; } .fan .card { width: 140px; } }
+    .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; padding: 2rem 1rem 12svh; overflow: hidden; }
+    .pole { position: absolute; left: 50%; top: 5svh; height: 150svh; translate: -50% 0; filter: drop-shadow(0 0 28px rgba(111,227,238,0.35)); animation: descend 1.2s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
+    @keyframes descend { from { opacity: 0; transform: translateY(-12%); } to { opacity: 1; transform: none; } }
+    .hero h1 { position: relative; font-size: clamp(3rem, 15vw, 15rem); font-weight: 900; letter-spacing: 0.06em; line-height: 1; text-shadow: 0 0 40px rgba(0,0,0,0.9), 0 0 4px #000; animation: rise 0.8s ease-in-out; }
+    .hero .sub { position: relative; margin: 1rem 0 2.25rem; font: 500 clamp(0.75rem, 1.6vw, 1rem) var(--title); letter-spacing: 0.6em; text-transform: uppercase; animation: riseLate 1.2s ease-in-out; }
+    .hero .btn-row { position: relative; justify-content: center; animation: riseLate 1.4s ease-in-out; }
+    .armoury { max-width: 1100px; margin: 0 auto 6rem; padding: 3rem; background: rgba(14,15,17,0.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(111,227,238,0.4); border-radius: 4px; box-shadow: 0 20px 60px rgba(111,227,238,0.1); }
+    .armoury h2 { font-size: clamp(1.8rem, 4.5vw, 3rem); margin: 0.75rem 0 0.5rem; text-shadow: 0 0 24px var(--glow); }
+    .armoury > p { margin-bottom: 2rem; max-width: 40rem; }
+    @media (max-width: 760px) { .armoury { padding: 2rem 1.1rem; margin: 0 1rem 4rem; } .hero { padding-bottom: 10svh; } }
   </style>
 </head>
 <body>
@@ -43,37 +36,40 @@
   <div class="tint"></div>
   <main>
     <section class="hero">
+      <img class="pole" src="/assets/halberd.svg" alt="">
       <h1>HALBERD</h1>
       <p class="sub">Technology</p>
       <div class="btn-row">
-        <a class="btn primary" href="/revolution/">Play Revolution</a>
+        <a class="btn primary" href="#games">Our games</a>
         <a class="btn" href="https://github.com/HalberdTechnology">GitHub</a>
       </div>
-      <span class="scroll-hint">SCROLL</span>
     </section>
 
-    <section class="panel">
-      <div>
-        <span class="kicker">Our first game</span>
-        <h2>Revolution</h2>
-        <p>A bluffing card game for road trips. Every player holds their own phone, so nobody sees your cards. Claim any role you like, call out the liars, and be the last one standing.</p>
-        <div class="btn-row">
-          <a class="btn primary" href="/revolution/">Learn more</a>
-          <a class="btn" href="/revolution/privacy/">Privacy</a>
+    <section class="armoury" id="games">
+      <span class="kicker">The armoury</span>
+      <h2>Small, sharp games</h2>
+      <p>Every Halberd game is forged the same way: native code, hand-written shaders, one cyan edge, and no ads or accounts. Revolution is the first blade off the rack.</p>
+      <div class="games">
+        <a class="game" href="/revolution/">
+          <div class="art"><div class="card" style="background-image:url(/assets/cards/enforcer.svg)"></div><div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div><div class="card" style="background-image:url(/assets/cards/sentinel.svg)"></div></div>
+          <div class="body"><span class="no">001</span><h3>Revolution</h3><p>A bluffing card game where every player uses their own phone.</p><div class="tags"><span>iOS</span><span>2 to 6 players</span><span>Coming soon</span></div></div>
+        </a>
+        <div class="game forge">
+          <div class="art"><img src="/assets/halberd.svg" alt=""></div>
+          <div class="body"><span class="no">002</span><h3>In the forge</h3><p>The next title is being hammered out.</p><div class="tags"><span>Unannounced</span></div></div>
         </div>
-      </div>
-      <div class="fan" aria-hidden="true">
-        <div class="card" style="background-image:url(/assets/cards/enforcer.svg)"></div>
-        <div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div>
-        <div class="card" style="background-image:url(/assets/cards/sentinel.svg)"></div>
+        <div class="game forge">
+          <div class="art"><img src="/assets/halberd.svg" alt=""></div>
+          <div class="body"><span class="no">003</span><h3>In the forge</h3><p>More to come.</p><div class="tags"><span>Unannounced</span></div></div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games. Built in Rust, shaded by hand.</p></div>
-      <div><h4>Revolution</h4><ul><li><a href="/revolution/">Overview</a></li><li><a href="/revolution/#support">Support</a></li><li><a href="/revolution/privacy/">Privacy policy</a></li></ul></div>
+      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>A studio of small, sharp games. Built in Rust, shaded by hand.</p></div>
+      <div><h4>Games</h4><ul><li><a href="/revolution/">Revolution</a></li><li><a href="/revolution/#support">Revolution support</a></li><li><a href="/revolution/privacy/">Revolution privacy</a></li></ul></div>
       <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li><li><a href="/concepts/">Site concepts</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="https://github.com/HalberdTechnology/halberdtechnology.github.io/issues">Open an issue</a></li></ul></div>
     </div>
@@ -83,9 +79,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.halo.min.js"></script>
   <script>
+    // The halo is centered on the halberd's blade, about a fifth of the way down the screen.
     if (window.VANTA && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
       VANTA.HALO({ el: "#vanta", mouseControls: true, touchControls: true, gyroControls: false,
-        baseColor: 0x0b6d78, backgroundColor: 0x0e0f11, amplitudeFactor: 2.2, size: 1.4 });
+        baseColor: 0x0b6d78, backgroundColor: 0x0e0f11, amplitudeFactor: 1.8, size: 0.9, xOffset: 0.0, yOffset: 0.22 });
     }
   </script>
 </body>
