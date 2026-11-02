@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 280 1000">
   <!-- Full halberd, head up. Steel is lit from the left; the axe's cutting edge is the one cyan accent.
-       The shaft is x 113-127 all the way down so pages can continue it with a plain CSS bar. -->
+       The shaft is x 113-127 all the way down; the viewBox has 20 units of margin each side so the
+       edge glow is not clipped. -->
   <defs>
     <linearGradient id="steel" x1="0" x2="1">
       <stop offset="0" stop-color="#F4F6F7"/>
@@ -18,6 +19,7 @@
       <stop offset="0.6" stop-color="#6FE3EE"/>
       <stop offset="1" stop-color="#DDFBFD"/>
     </linearGradient>
+    <filter id="glow" x="-1" y="-0.2" width="3" height="1.4"><feGaussianBlur stdDeviation="7"/></filter>
     <linearGradient id="wood" x1="0" x2="1">
       <stop offset="0" stop-color="#3A3F45"/>
       <stop offset="0.4" stop-color="#5A6067"/>
@@ -55,6 +57,7 @@
 
   <!-- axe blade: rising top edge, convex cutting edge, bearded lower horn -->
   <path d="M130 204 L172 188 Q194 176 206 144 Q234 252 212 362 Q196 336 174 326 L130 304 Z" fill="url(#plate)"/>
+  <path d="M206 144 Q234 252 212 362" fill="none" stroke="#6FE3EE" stroke-width="12" filter="url(#glow)" opacity="0.75"/>
   <path d="M206 144 Q234 252 212 362 L203 348 Q223 252 198 160 Z" fill="url(#edge)"/>
   <path d="M138 214 L170 202 Q188 194 196 172" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.6"/>
   <path d="M138 296 L170 312" stroke="#5A6067" stroke-width="1.2"/>

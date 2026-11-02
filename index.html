@@ -15,18 +15,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <style>
-    /* Hero: a fixed smoke shader with a cyan rim light that trails the pointer, and a 3D halberd
-       leaning across the screen. Below it, the armoury: a halberd shaft runs down the page,
+    /* Hero: a fixed smoke shader with a cyan rim light that trails the pointer, and the halberd
+       leaning across the screen: its cutting edge glows, and a glint runs down the steel every few
+       seconds, flaring the edge as it passes. The shaft runs on past the hero into the armoury. Below it, the armoury: a halberd shaft runs down the page,
        filling with cyan as you scroll, with each game hung off it like a notch. */
     :root { --shaft: 14px; }
     #smoke { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; background: #0E0F11; }
     main { position: relative; z-index: 2; }
 
-    .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding: 0 1.5rem 14svh; }
-    .weapon { position: absolute; inset: 0 0 -70svh 0; pointer-events: none; animation: fadeIn 1.4s ease-out;
-      -webkit-mask-image: linear-gradient(#000 calc(100% - 60svh), transparent); mask-image: linear-gradient(#000 calc(100% - 60svh), transparent); }
-    .weapon img { position: absolute; right: 16vw; top: 50%; height: 150svh; transform: translateY(-36%) rotate(32deg); }
-    @keyframes fadeIn { from { opacity: 0; } }
+    .hero { position: relative; min-height: 100svh; overflow-x: clip; display: flex; align-items: flex-end; padding: 0 1.5rem 14svh; }
+    .weapon { position: absolute; right: 16vw; top: 50%; height: 150svh; aspect-ratio: 280 / 1000; --ty: -36%; --rot: 32deg;
+      transform: translateY(var(--ty)) rotate(var(--rot)); pointer-events: none; animation: swing 1.3s cubic-bezier(.2,.8,.2,1); }
+    .weapon > * { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .weapon .steel { filter: drop-shadow(0 30px 40px rgba(0,0,0,0.8)); }
+    .weapon .edge { mix-blend-mode: screen; opacity: 0.6; animation: flare 5s ease-in-out 1.4s infinite; }
+    .weapon .glint { -webkit-mask: url(/assets/halberd.svg) center / 100% 100% no-repeat; mask: url(/assets/halberd.svg) center / 100% 100% no-repeat;
+      background: linear-gradient(170deg, transparent 40%, rgba(255,255,255,1) 48%, rgba(111,227,238,0.9) 50%, transparent 58%) 0 0 / 100% 300% no-repeat;
+      mix-blend-mode: screen; animation: glint 5s ease-in-out 1.4s infinite; }
+    @keyframes glint { 0% { background-position: 0 -100%; } 35%, 100% { background-position: 0 200%; } }
+    @keyframes flare { 0%, 4% { opacity: 0.6; filter: none; } 12% { opacity: 1; filter: brightness(1.8) drop-shadow(0 0 18px #6FE3EE); } 26%, 100% { opacity: 0.6; filter: none; } }
+    @keyframes swing { from { opacity: 0; transform: translateY(var(--ty)) rotate(calc(var(--rot) + 38deg)); } }
     .copy { position: relative; max-width: 1240px; width: 100%; margin: 0 auto; }
     .copy h1 { margin: 1rem 0 2rem; font-size: clamp(3rem, 12vw, 11rem); font-weight: 900; letter-spacing: 0.05em; line-height: 0.95; text-shadow: 0 0 40px rgba(0,0,0,0.6); animation: rise 0.8s ease-in-out; }
     .copy h1 span { color: var(--primary); text-shadow: 0 0 40px var(--glow); }
@@ -51,7 +59,7 @@
 
     @media (max-width: 760px) {
       .hero { padding-bottom: 10svh; }
-      .weapon img { right: auto; left: 22vw; height: 95svh; transform: translateY(-44%) rotate(18deg); opacity: 0.85; }
+      .weapon { right: auto; left: 22vw; height: 95svh; --ty: -44%; --rot: 18deg; }
       .notches { gap: 3rem; }
       .notch, .notch:nth-child(odd), .notch:nth-child(even) { width: 100%; justify-self: stretch; }
       .notch::before, .notch::after { display: none; }
@@ -62,7 +70,7 @@
   <canvas id="smoke" aria-hidden="true"></canvas>
   <main>
     <section class="hero">
-      <div class="weapon" aria-hidden="true" data-halberd><img src="/assets/halberd.svg" alt=""></div>
+      <div class="weapon" aria-hidden="true"><img class="steel" src="/assets/halberd.svg" alt=""><img class="edge" src="/assets/halberd-edge.svg" alt=""><div class="glint"></div></div>
       <div class="copy">
         <span class="kicker">Small, sharp games</span>
         <h1>HALB<span>E</span>RD</h1>
@@ -104,8 +112,6 @@
     <div class="legal">© 2026 Halberd Technology</div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="/assets/halberd3d.js"></script>
   <script>
     // Drifting smoke (fbm noise) in grayscale, with a cyan rim light that trails the pointer.
     (function () {

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 280 1000">
+  <!-- Just the halberd's cutting edge and its glow, in the same frame as halberd.svg, so a page can
+       lay it over the halberd and pulse it. -->
+  <defs>
+    <filter id="wide" x="-2" y="-0.4" width="5" height="1.8"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="tight" x="-1" y="-0.2" width="3" height="1.4"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <path d="M206 144 Q234 252 212 362" fill="none" stroke="#6FE3EE" stroke-width="22" filter="url(#wide)"/>
+  <path d="M206 144 Q234 252 212 362" fill="none" stroke="#9FF2F8" stroke-width="8" filter="url(#tight)"/>
+  <path d="M206 144 Q234 252 212 362 L203 348 Q223 252 198 160 Z" fill="#E8FDFF"/>
+</svg>
