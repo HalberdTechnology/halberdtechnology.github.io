@@ -1,44 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 1000">
-  <!-- Full halberd, head up: spike, cyan axe blade, gray back hook, langets, collars and shaft. -->
+  <!-- Full halberd, head up. Steel is lit from the left; the axe's cutting edge is the one cyan accent.
+       The shaft is x 113-127 all the way down so pages can continue it with a plain CSS bar. -->
   <defs>
     <linearGradient id="steel" x1="0" x2="1">
-      <stop offset="0" stop-color="#C9CED3"/>
-      <stop offset="0.5" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#8D9399"/>
+      <stop offset="0" stop-color="#F4F6F7"/>
+      <stop offset="0.45" stop-color="#D5DADE"/>
+      <stop offset="0.55" stop-color="#9EA4AA"/>
+      <stop offset="1" stop-color="#6A7076"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEF1F3"/>
+      <stop offset="0.6" stop-color="#B9BFC4"/>
+      <stop offset="1" stop-color="#7C8288"/>
     </linearGradient>
     <linearGradient id="edge" x1="0" x2="1">
-      <stop offset="0" stop-color="#2E8F99"/>
-      <stop offset="0.55" stop-color="#6FE3EE"/>
-      <stop offset="1" stop-color="#C8F6FA"/>
+      <stop offset="0" stop-color="#1F7F89"/>
+      <stop offset="0.6" stop-color="#6FE3EE"/>
+      <stop offset="1" stop-color="#DDFBFD"/>
     </linearGradient>
     <linearGradient id="wood" x1="0" x2="1">
-      <stop offset="0" stop-color="#2A2E33"/>
-      <stop offset="0.5" stop-color="#5A6067"/>
+      <stop offset="0" stop-color="#3A3F45"/>
+      <stop offset="0.4" stop-color="#5A6067"/>
       <stop offset="1" stop-color="#1F2226"/>
     </linearGradient>
   </defs>
-  <!-- shaft -->
-  <rect x="113" y="300" width="14" height="680" fill="url(#wood)"/>
-  <rect x="109" y="968" width="22" height="26" rx="2" fill="url(#steel)"/>
-  <!-- spike -->
-  <path d="M120 0 L134 168 L120 182 L106 168 Z" fill="url(#steel)"/>
-  <path d="M120 10 L120 176" stroke="#8D9399" stroke-width="1.5"/>
-  <!-- socket -->
-  <rect x="110" y="176" width="20" height="150" fill="url(#steel)"/>
-  <!-- axe blade with a cyan cutting edge -->
-  <path d="M130 196 L196 150 Q248 254 196 360 L130 316 Z" fill="url(#steel)"/>
-  <path d="M188 156 Q236 254 188 354 L196 360 Q248 254 196 150 Z" fill="url(#edge)"/>
-  <circle cx="156" cy="256" r="9" fill="none" stroke="#5A6067" stroke-width="3"/>
-  <!-- back hook -->
-  <path d="M110 214 L28 196 Q20 194 26 202 Q56 238 46 286 L110 268 Z" fill="url(#steel)"/>
-  <path d="M110 230 L52 222" stroke="#8D9399" stroke-width="2"/>
-  <!-- langets and collars -->
-  <rect x="112" y="326" width="16" height="110" fill="#8D9399"/>
-  <rect x="104" y="330" width="32" height="10" fill="url(#steel)"/>
-  <rect x="106" y="348" width="28" height="4" fill="url(#steel)"/>
-  <rect x="106" y="430" width="28" height="8" fill="url(#steel)"/>
-  <!-- grip wrap -->
-  <g stroke="#0E0F11" stroke-width="2" opacity="0.6">
-    <path d="M113 620 L127 610 M113 640 L127 630 M113 660 L127 650 M113 680 L127 670 M113 700 L127 690 M113 720 L127 710"/>
+
+  <!-- shaft, grain and butt ferrule -->
+  <rect x="113" y="320" width="14" height="660" fill="url(#wood)"/>
+  <path d="M117 480 L117 960 M123 520 L123 900" stroke="#2A2E33" stroke-width="1" opacity="0.7"/>
+  <g fill="#16181B" opacity="0.75">
+    <path d="M113 610 L127 600 L127 606 L113 616 Z"/><path d="M113 630 L127 620 L127 626 L113 636 Z"/>
+    <path d="M113 650 L127 640 L127 646 L113 656 Z"/><path d="M113 670 L127 660 L127 666 L113 676 Z"/>
+    <path d="M113 690 L127 680 L127 686 L113 696 Z"/><path d="M113 710 L127 700 L127 706 L113 716 Z"/>
   </g>
+  <rect x="111" y="598" width="18" height="4" fill="url(#steel)"/>
+  <rect x="111" y="718" width="18" height="4" fill="url(#steel)"/>
+  <path d="M110 962 L130 962 L128 992 L120 1000 L112 992 Z" fill="url(#steel)"/>
+
+  <!-- langets riveted down the shaft -->
+  <rect x="111" y="330" width="4" height="150" fill="url(#steel)"/>
+  <rect x="125" y="330" width="4" height="150" fill="#7C8288"/>
+  <g fill="#0E0F11"><circle cx="113" cy="380" r="1.4"/><circle cx="113" cy="430" r="1.4"/><circle cx="127" cy="380" r="1.4"/><circle cx="127" cy="430" r="1.4"/></g>
+
+  <!-- top spike with a central ridge -->
+  <path d="M120 0 L132 70 L135 172 L120 190 L105 172 L108 70 Z" fill="url(#steel)"/>
+  <path d="M120 0 L132 70 L135 172 L120 190 Z" fill="#000" opacity="0.18"/>
+  <path d="M120 14 L120 180" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+
+  <!-- socket with collars -->
+  <rect x="110" y="184" width="20" height="146" fill="url(#steel)"/>
+  <rect x="106" y="186" width="28" height="8" rx="1" fill="url(#steel)"/>
+  <rect x="105" y="314" width="30" height="10" rx="1" fill="url(#steel)"/>
+  <rect x="108" y="328" width="24" height="4" fill="url(#steel)"/>
+
+  <!-- axe blade: rising top edge, convex cutting edge, bearded lower horn -->
+  <path d="M130 204 L172 188 Q194 176 206 144 Q234 252 212 362 Q196 336 174 326 L130 304 Z" fill="url(#plate)"/>
+  <path d="M206 144 Q234 252 212 362 L203 348 Q223 252 198 160 Z" fill="url(#edge)"/>
+  <path d="M138 214 L170 202 Q188 194 196 172" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.6"/>
+  <path d="M138 296 L170 312" stroke="#5A6067" stroke-width="1.2"/>
+  <!-- pierced decoration -->
+  <circle cx="152" cy="254" r="8" fill="#0E0F11"/>
+  <circle cx="152" cy="254" r="8" fill="none" stroke="#5A6067" stroke-width="2"/>
+  <path d="M178 206 Q196 254 178 302 Q186 254 178 206 Z" fill="#0E0F11" stroke="#5A6067" stroke-width="1.2"/>
+
+  <!-- back hook, curving down to a point -->
+  <path d="M110 214 L66 214 Q34 214 10 244 Q42 236 62 244 Q84 252 110 266 Z" fill="url(#plate)"/>
+  <path d="M110 230 L64 230 Q42 232 26 240" fill="none" stroke="#5A6067" stroke-width="1.4"/>
+  <path d="M110 214 L66 214 Q34 214 10 244" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
 </svg>
