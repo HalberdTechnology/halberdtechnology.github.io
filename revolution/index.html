@@ -4,30 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revolution</title>
-  <meta name="description" content="Revolution is a bluffing card game for 2 to 6 players where everyone plays on their own iPhone. Claim any role, call out liars, and be the last one standing.">
+  <meta name="description" content="Revolution is a bluffing card game for 2 to 6 players on iPhone. Everyone plays on their own phone. Claim any role, call out the liars, be the last one standing.">
   <meta name="theme-color" content="#0E0F11">
-  <meta property="og:title" content="Revolution by Halberd Technology">
-  <meta property="og:description" content="A bluffing card game where every player uses their own phone.">
-  <meta property="og:image" content="https://halberdtechnology.github.io/assets/avatar.png">
+  <meta property="og:title" content="Revolution: a bluffing card game">
+  <meta property="og:description" content="Trust no one. A bluffing card game where every player uses their own iPhone.">
+  <meta property="og:image" content="https://halberdtechnology.github.io/assets/shots/menu.png">
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <style>
+    /* App Store marketing page. Follows Apple's marketing guidelines: real in-app screenshots in a
+       generic device frame (no Apple hardware artwork), "App Store" and "iPhone" written as Apple
+       writes them, no "Download on the App Store" badge until the app has a live listing to link
+       to, and the trademark notice in the footer. */
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
-    .hero { padding: 6rem 0 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
-    .hero h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); font-weight: 900; letter-spacing: 0.04em; margin: 0.75rem 0 1rem; animation: rise 0.8s ease-in-out; }
+    .hero { padding: 5rem 0 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); font-weight: 900; letter-spacing: 0.08em; margin: 0.75rem 0 0.5rem; animation: rise 0.8s ease-in-out; }
+    .hero .motto { font: 500 0.95rem var(--title); letter-spacing: 0.5em; text-transform: uppercase; margin-bottom: 1.75rem; }
     .hero .lede { font-size: 1.2rem; max-width: 32rem; margin-bottom: 2rem; }
-    .badge { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.7rem 1.2rem; border: 1px solid var(--outline); border-radius: 4px; font: 600 0.8rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; }
+    .badge { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.8rem 1.25rem; border: 1px solid var(--outline); border-radius: 4px; font: 600 0.8rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; }
     .badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 12px var(--primary); }
-    .fan { position: relative; height: 400px; }
-    .fan .card { position: absolute; width: 180px; left: 50%; top: 50%; transition: transform 0.5s cubic-bezier(.2,.8,.2,1); }
-    .fan .card:nth-child(1) { transform: translate(-50%,-50%) translateX(-100px) rotate(-14deg); }
-    .fan .card:nth-child(2) { transform: translate(-50%,-50%) translateY(-16px); z-index: 2; }
-    .fan .card:nth-child(3) { transform: translate(-50%,-50%) translateX(100px) rotate(14deg); }
+    .facts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .facts span { font: 600 0.68rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; padding: 0.45rem 0.7rem; border: 1px solid var(--outline-variant); border-radius: 2px; }
+
+    /* Generic phone frame around a real screenshot. */
+    .phone { position: relative; width: 100%; max-width: 280px; aspect-ratio: 430 / 880; margin: 0 auto; padding: 10px; border-radius: 36px; background: linear-gradient(145deg, #3a3f45, #16181b); box-shadow: 0 30px 70px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.08); }
+    .phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+    .hero .phone { max-width: 300px; transform: rotate(3deg); }
+
     section.block { padding: 4.5rem 0; border-top: 1px solid var(--outline-variant); }
     section.block > h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0.75rem 0 2rem; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .gallery figcaption { margin-top: 1rem; text-align: center; font-size: 0.95rem; }
+    .gallery figcaption strong { display: block; font: 700 0.78rem var(--title); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.2rem; }
     .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .features > div { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.5rem; }
     .features h3 { font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.6rem; }
@@ -36,38 +47,49 @@
     .roles h3 { font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; }
     .roles p { font-size: 0.92rem; margin-top: 0.3rem; }
     .roles .act { color: var(--primary); font-weight: 600; }
-    .steps { counter-reset: s; display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
-    .steps li { list-style: none; counter-increment: s; background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.25rem 1.5rem 1.25rem 4rem; position: relative; }
-    .steps li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 1.25rem; top: 1.2rem; font: 900 1.1rem var(--title); color: var(--primary); }
-    details { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.1rem 1.4rem; margin-bottom: 0.75rem; }
-    summary { cursor: pointer; font-weight: 600; }
-    details p { margin-top: 0.75rem; }
-    .contact { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--outline-variant); border: 1px solid var(--outline-variant); border-radius: 4px; overflow: hidden; }
+    .specs > div { background: var(--container); padding: 1.25rem 1.4rem; }
+    .specs dd { margin: 0; }
+    .specs dt { font: 600 0.7rem var(--title); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .trademark { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 0; font-size: 0.8rem; }
     @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; padding-top: 3.5rem; } .fan { height: 320px; } .fan .card { width: 140px; }
-      .features, .steps { grid-template-columns: 1fr; }
+      .hero { grid-template-columns: 1fr; padding-top: 3rem; } .hero .phone { max-width: 240px; }
+      .gallery { grid-template-columns: repeat(4, 70%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+      .gallery figure { scroll-snap-align: center; }
+      .features { grid-template-columns: 1fr; }
       .roles { grid-template-columns: repeat(2, 1fr); }
+      .specs { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a>
-    <nav><a href="/revolution/" aria-current="page">Revolution</a><a href="/revolution/privacy/">Privacy</a></nav>
+    <nav><a href="/revolution/" aria-current="page">Revolution</a><a href="/revolution/support/">Support</a><a href="/revolution/privacy/">Privacy</a></nav>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="kicker">A bluffing card game for 2 to 6 players</span>
+        <span class="kicker">A bluffing card game</span>
         <h1>REVOLUTION</h1>
-        <p class="lede">Everyone gets two secret cards and their own phone. Claim any role you like, call out the liars, and be the last one standing.</p>
+        <p class="motto">Trust no one</p>
+        <p class="lede">Everyone gets two secret cards and their own iPhone. Claim any role you like, call out the liars, and be the last one standing.</p>
         <span class="badge">Coming soon to the App Store</span>
+        <div class="facts"><span>iPhone</span><span>2 to 6 players</span><span>Solo vs bots</span><span>No ads</span><span>No accounts</span></div>
       </div>
-      <div class="fan" aria-hidden="true">
-        <div class="card" style="background-image:url(/assets/cards/operative.svg)"></div>
-        <div class="card" style="background-image:url(/assets/cards/magnate.svg)"></div>
-        <div class="card" style="background-image:url(/assets/cards/broker.svg)"></div>
+      <div class="phone"><img src="/assets/shots/menu.png" alt="Revolution's start screen: a scanline sun over a city skyline, with a callsign field and Host and Join buttons." width="430" height="880"></div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">Screenshots</span>
+      <h2>Your hand stays on your phone</h2>
+      <div class="gallery">
+        <figure><div class="phone"><img src="/assets/shots/table.png" alt="The table on your turn: three opponents, your two role cards and the action buttons." loading="lazy" width="430" height="880"></div><figcaption><strong>Your move</strong>Take coins, claim a role, or Purge.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/defend.png" alt="An opponent challenges your claim; you can reveal the card or concede." loading="lazy" width="430" height="880"></div><figcaption><strong>Called out</strong>Reveal the card, or take the hit.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/exchange.png" alt="Swapping: four cards laid out, keep two of them." loading="lazy" width="430" height="880"></div><figcaption><strong>Swap</strong>Draw two and keep the best.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/table-light.png" alt="The same table in the light theme." loading="lazy" width="430" height="880"></div><figcaption><strong>Light or dark</strong>Monochrome, one cyan accent.</figcaption></figure>
       </div>
     </section>
 
@@ -97,26 +119,22 @@
       <p style="margin-top:2rem">Save up seven coins and you can <strong>Purge</strong> any player, no questions asked. Get caught lying and you lose a card. Lose both and you are out.</p>
     </section>
 
-    <section class="block" id="support">
-      <span class="kicker">Support</span>
-      <h2>Getting a game going</h2>
-      <ol class="steps">
-        <li>Everyone installs Revolution and picks a callsign.</li>
-        <li>One player taps <strong>Host game</strong> and reads out the room code.</li>
-        <li>Everyone else taps <strong>Join game</strong> and types the code.</li>
-        <li>The host starts the round once everyone is in.</li>
-      </ol>
-
-      <h2 style="margin-top:3.5rem">Questions</h2>
-      <details><summary>Do we need internet?</summary><p>Yes. Online games connect through our relay server, so each phone needs mobile data or Wi-Fi. A steady connection gives the best game, so expect the odd hiccup in tunnels.</p></details>
-      <details><summary>How many people can play?</summary><p>Two to six. You can also play solo against bots.</p></details>
-      <details><summary>Why does it ask for local network access?</summary><p>So phones on the same Wi-Fi or hotspot can find each other directly. It is only used to connect to other players' phones.</p></details>
-      <details><summary>Is it on Android?</summary><p>Not yet. Revolution is iPhone-only for now.</p></details>
-      <details><summary>What does the app collect?</summary><p>Nothing that identifies you. The details are in the <a href="/revolution/privacy/">privacy policy</a>.</p></details>
-
-      <div class="contact">
-        <p>Found a bug or need a hand?</p>
-        <a class="btn primary" href="mailto:kingvoidyt@gmail.com?subject=Revolution%20support">Contact support</a>
+    <section class="block">
+      <span class="kicker">Details</span>
+      <h2>Requirements</h2>
+      <dl class="specs">
+        <div><dt>Device</dt><dd>iPhone</dd></div>
+        <div><dt>Requires</dt><dd>iOS 15.0 or later</dd></div>
+        <div><dt>Players</dt><dd>2 to 6, or solo against bots</dd></div>
+        <div><dt>Connection</dt><dd>Internet for online games</dd></div>
+        <div><dt>Languages</dt><dd>English</dd></div>
+        <div><dt>Data collected</dt><dd>None linked to you. <a href="/revolution/privacy/">Privacy policy</a></dd></div>
+        <div><dt>Developer</dt><dd>Halberd Technology</dd></div>
+        <div><dt>Support</dt><dd><a href="/revolution/support/">Help and contact</a></dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn primary" href="/revolution/support/">Get support</a>
+        <a class="btn" href="/revolution/privacy/">Privacy policy</a>
       </div>
     </section>
   </main>
@@ -124,10 +142,11 @@
   <footer class="site-footer">
     <div class="inner">
       <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games.</p></div>
-      <div><h4>Revolution</h4><ul><li><a href="/revolution/">Overview</a></li><li><a href="/revolution/privacy/">Privacy policy</a></li></ul></div>
+      <div><h4>Games</h4><ul><li><a href="/revolution/">Revolution</a></li><li><a href="/revolution/privacy/">Revolution privacy</a></li></ul></div>
       <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="mailto:kingvoidyt@gmail.com">kingvoidyt@gmail.com</a></li></ul></div>
     </div>
+    <p class="trademark">Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
     <div class="legal">© 2026 Halberd Technology</div>
   </footer>
 </body>

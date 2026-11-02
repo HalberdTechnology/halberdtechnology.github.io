@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revolution Support</title>
+  <meta name="description" content="Help with Revolution by Halberd Technology: starting a game, common questions, and how to contact us.">
+  <meta name="theme-color" content="#0E0F11">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .steps { counter-reset: s; display: grid; gap: 0.75rem; margin: 1rem 0 0; padding: 0 !important; }
+    .steps li { list-style: none; counter-increment: s; background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1rem 1.25rem 1rem 3.75rem; position: relative; margin: 0; }
+    .steps li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 1.1rem; top: 1rem; font: 900 1rem var(--title); color: var(--primary); }
+    details { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { margin: 0.75rem 0 0; }
+    .contact { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .trademark { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 0; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a>
+    <nav><a href="/revolution/">Revolution</a><a href="/revolution/support/" aria-current="page">Support</a><a href="/revolution/privacy/">Privacy</a></nav>
+  </header>
+
+  <main class="doc">
+    <span class="kicker">Revolution</span>
+    <h1>Support</h1>
+    <p class="meta">Help with Revolution for iPhone.</p>
+
+    <div class="summary">
+      <strong>Need a hand?</strong>
+      <p style="margin:0.5rem 0 0">Email <a href="mailto:kingvoidyt@gmail.com?subject=Revolution%20support">kingvoidyt@gmail.com</a>. Tell us your iPhone model, iOS version and what happened, and we will get back to you.</p>
+      <div class="contact"><a class="btn primary" href="mailto:kingvoidyt@gmail.com?subject=Revolution%20support">Email support</a></div>
+    </div>
+
+    <h2>Start a game</h2>
+    <ol class="steps">
+      <li>Everyone installs Revolution and picks a callsign.</li>
+      <li>One player taps <strong>Host game</strong> and reads out the room code.</li>
+      <li>Everyone else taps <strong>Join game</strong> and types the code.</li>
+      <li>The host starts the round once everyone is in.</li>
+    </ol>
+    <p style="margin-top:1rem">Playing alone? Choose to play against bots from the menu.</p>
+
+    <h2>Questions</h2>
+    <details><summary>Do we need internet?</summary><p>Yes, for online games. They connect through our relay server, so each phone needs mobile data or Wi-Fi. A steady connection gives the best game, so expect the odd hiccup in tunnels.</p></details>
+    <details><summary>How many people can play?</summary><p>Two to six. You can also play solo against bots.</p></details>
+    <details><summary>Why does it ask for local network access?</summary><p>So phones on the same Wi-Fi or hotspot can find each other directly. It is only used to connect to other players' phones. You can change it in Settings &gt; Privacy &amp; Security &gt; Local Network.</p></details>
+    <details><summary>The room code doesn't work.</summary><p>Check that the host is still in the lobby and that the code was typed exactly. Codes only last while the host's room is open, so if the host left, have them host again.</p></details>
+    <details><summary>Is it on Android?</summary><p>Not yet. Revolution is iPhone-only for now.</p></details>
+    <details><summary>What does the app collect?</summary><p>Nothing that identifies you. The details are in the <a href="/revolution/privacy/">privacy policy</a>.</p></details>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games.</p></div>
+      <div><h4>Games</h4><ul><li><a href="/revolution/">Revolution</a></li><li><a href="/revolution/privacy/">Revolution privacy</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:kingvoidyt@gmail.com">kingvoidyt@gmail.com</a></li></ul></div>
+    </div>
+    <p class="trademark">Apple, the Apple logo and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+    <div class="legal">© 2026 Halberd Technology</div>
+  </footer>
+</body>
+</html>

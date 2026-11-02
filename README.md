@@ -5,8 +5,8 @@ The Halberd Technology website, served by GitHub Pages at <https://halberdtechno
 | Path | Page | App Store Connect field |
 |---|---|---|
 | `/` | Landing page | |
-| `/revolution/` | Revolution overview | Marketing URL |
-| `/revolution/#support` | Revolution support and FAQ | Support URL |
+| `/revolution/` | Revolution marketing page | Marketing URL |
+| `/revolution/support/` | Revolution support and contact | Support URL |
 | `/revolution/privacy/` | Revolution privacy policy | Privacy Policy URL |
 
 Shared tokens, buttons and the footer live in `assets/site.css`.
