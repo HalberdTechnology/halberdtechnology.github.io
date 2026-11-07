@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moonbluff</title>
+  <meta name="description" content="Moonbluff is a one-night hidden-role game for 3 to 10 players on iPhone. Cards swap in the dark, the table gets one day to talk, and a single hidden vote to find a wolf.">
+  <meta name="theme-color" content="#F4F2EE">
+  <meta property="og:title" content="Moonbluff: someone is lying">
+  <meta property="og:description" content="A one-night hidden-role game for a table of phones.">
+  <meta property="og:image" content="https://halberdtechnology.github.io/assets/shots/moonbluff/menu.png">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/game.css">
+  <style>:root { --primary: var(--moonbluff); --glow: rgba(176, 122, 22, 0.25); }</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a>
+    <nav><a href="/#games">Games</a><a href="/moonbluff/" aria-current="page">Moonbluff</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="kicker">A one-night hidden-role game</span>
+        <h1>MOONBLUFF</h1>
+        <p class="motto">Someone is lying</p>
+        <p class="lede">Everyone is dealt a card. The cards wake in turn and some of them swap others around in the dark. Then the table has one day to talk and a single hidden vote to find a wolf.</p>
+        <span class="badge">In development</span>
+        <div class="facts"><span>iPhone</span><span>3 to 10 players</span><span>In person or remote</span><span>Practice vs bots</span></div>
+      </div>
+      <div class="phone"><img src="/assets/shots/moonbluff/menu.png" alt="Moonbluff's menu: a striped crescent moon over a city at night, with a callsign field and Join and Host buttons." width="430" height="880"></div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">Screenshots</span>
+      <h2>One night, one day, one vote</h2>
+      <div class="gallery">
+        <figure><div class="phone"><img src="/assets/shots/moonbluff/turn.png" alt="A night turn: tap the lit card." loading="lazy" width="430" height="880"></div><figcaption><strong>The night</strong>Every phone taps, every turn.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/moonbluff/day.png" alt="The day: role claims and hidden votes." loading="lazy" width="430" height="880"></div><figcaption><strong>The day</strong>Claims, accusations, one vote.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/moonbluff/results.png" alt="The reveal: where every card ended up." loading="lazy" width="430" height="880"></div><figcaption><strong>The reveal</strong>See where every card really went.</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/shots/moonbluff/menu.png" alt="The menu, with practice against bots." loading="lazy" width="430" height="880"></div><figcaption><strong>Practice</strong>Learn it against bots first.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">Why it plays well</span>
+      <h2>Built for a table of phones</h2>
+      <div class="features">
+        <div><h3>Nobody gives it away</h3><p>Every role gets a turn, even one lying in the middle, and every phone has something to tap. You can't tell who's acting from a neighbour's screen.</p></div>
+        <div><h3>In person or remote</h3><p>Around one table, phones down at dawn and the arguing done out loud. Or apart on a call, with claims made in the app.</p></div>
+        <div><h3>One game, ten minutes</h3><p>One night and one day. No eliminations, nobody sitting out: everyone plays to the vote.</p></div>
+        <div><h3>Pick the roles</h3><p>The host turns optional roles on or off in the lobby, so the night is as simple or as twisted as the table wants.</p></div>
+        <div><h3>Practice against bots</h3><p>Learn the night order and the bluffs on your own before you bring them to the table.</p></div>
+        <div><h3>Native and fast</h3><p>Written in Rust on the Halberd engine, the same one under Revolution.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="kicker">The night</span>
+      <h2>Who wakes, and what they do</h2>
+      <div class="roster">
+        <div><h3>Wolf</h3><p><span class="act">Wolf team.</span> Sees the pack. Two are always in.</p></div>
+        <div><h3>Hound</h3><p><span class="act">Wolf team.</span> Sniffs one player: do they hold the Oracle?</p></div>
+        <div><h3>Saboteur</h3><p><span class="act">Wolf team.</span> Jams one player: tonight's reads on them come out wrong.</p></div>
+        <div><h3>Oracle</h3><p><span class="act">Town.</span> Learns whether one player's card is on the wolf team.</p></div>
+        <div><h3>Gossip</h3><p><span class="act">Town.</span> Learns whether two players are on the same team.</p></div>
+        <div><h3>Bodyguard</h3><p><span class="act">Town.</span> Guards one card: it can't move tonight.</p></div>
+        <div><h3>Smuggler</h3><p><span class="act">Town.</span> Swaps a player's card with one in the middle, unseen.</p></div>
+        <div><h3>Forger</h3><p><span class="act">Town.</span> Swaps their own card with another player's, unseen.</p></div>
+        <div><h3>Lookout</h3><p><span class="act">Town.</span> Learns whether a player's card has moved.</p></div>
+        <div><h3>Judge</h3><p><span class="act">Town.</span> By day, their vote counts twice.</p></div>
+      </div>
+      <p style="margin-top:2rem">Plus the Accomplice, Archivist, Sleepwalker, Witness and plain Citizens. As many cards as players, plus three face down in the middle.</p>
+    </section>
+
+    <section class="block">
+      <span class="kicker">Details</span>
+      <h2>At a glance</h2>
+      <dl class="specs">
+        <div><dt>Device</dt><dd>iPhone</dd></div>
+        <div><dt>Players</dt><dd>3 to 10, or practice against bots</dd></div>
+        <div><dt>Modes</dt><dd>In person around one table, or remote</dd></div>
+        <div><dt>Status</dt><dd>In development</dd></div>
+        <div><dt>Developer</dt><dd>Halberd Technology</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:kingvoidyt@gmail.com">kingvoidyt@gmail.com</a></dd></div>
+      </dl>
+      <div class="cta"><a class="btn primary" href="/#games">All games</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div><a class="brand" href="/"><img src="/assets/logo.svg" alt="">HALBERD</a><p>Small, sharp games.</p></div>
+      <div><h4>Games</h4><ul><li><a href="/revolution/">Revolution</a></li><li><a href="/moonbluff/">Moonbluff</a></li><li><a href="/under-the-radar/">Under the Radar</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="https://github.com/HalberdTechnology">GitHub</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:kingvoidyt@gmail.com">kingvoidyt@gmail.com</a></li></ul></div>
+    </div>
+    <p class="trademark">Apple and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+    <div class="legal">© 2026 Halberd Technology</div>
+  </footer>
+</body>
+</html>

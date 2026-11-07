@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 280 1000">
+  <!-- The halberd from halberd.svg, redrawn as an ink drawing for the light site: paper fills, ink
+       outlines, hatching for shade, and the cutting edge in the one cyan accent. Same frame and
+       geometry, so it can stand in for it anywhere. -->
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 V6" stroke="#16181B" stroke-width="1.1"/>
+    </pattern>
+  </defs>
+  <g fill="#FAF9F6" stroke="#16181B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- shaft, grain and butt ferrule -->
+    <rect x="113" y="320" width="14" height="660"/>
+    <rect x="121" y="320" width="6" height="660" fill="url(#hatch)" stroke="none" opacity="0.55"/>
+    <path d="M117 480 L117 960" fill="none" stroke-width="1"/>
+    <g fill="#16181B" stroke="none">
+      <path d="M113 610 L127 600 L127 606 L113 616 Z"/><path d="M113 630 L127 620 L127 626 L113 636 Z"/>
+      <path d="M113 650 L127 640 L127 646 L113 656 Z"/><path d="M113 670 L127 660 L127 666 L113 676 Z"/>
+      <path d="M113 690 L127 680 L127 686 L113 696 Z"/><path d="M113 710 L127 700 L127 706 L113 716 Z"/>
+    </g>
+    <rect x="111" y="598" width="18" height="4"/>
+    <rect x="111" y="718" width="18" height="4"/>
+    <path d="M110 962 L130 962 L128 992 L120 1000 L112 992 Z"/>
+
+    <!-- langets riveted down the shaft -->
+    <rect x="111" y="330" width="4" height="150"/>
+    <rect x="125" y="330" width="4" height="150"/>
+    <g fill="#16181B" stroke="none"><circle cx="113" cy="380" r="1.6"/><circle cx="113" cy="430" r="1.6"/><circle cx="127" cy="380" r="1.6"/><circle cx="127" cy="430" r="1.6"/></g>
+
+    <!-- top spike: the right flank in shade -->
+    <path d="M120 0 L132 70 L135 172 L120 190 L105 172 L108 70 Z"/>
+    <path d="M120 0 L132 70 L135 172 L120 190 Z" fill="url(#hatch)" stroke="none" opacity="0.6"/>
+    <path d="M120 14 L120 180" fill="none" stroke-width="1.2"/>
+
+    <!-- socket with collars -->
+    <rect x="110" y="184" width="20" height="146"/>
+    <rect x="122" y="196" width="8" height="118" fill="url(#hatch)" stroke="none" opacity="0.5"/>
+    <rect x="106" y="186" width="28" height="8" rx="1"/>
+    <rect x="105" y="314" width="30" height="10" rx="1"/>
+    <rect x="108" y="328" width="24" height="4"/>
+
+    <!-- axe blade: rising top edge, convex cutting edge, bearded lower horn -->
+    <path d="M130 204 L172 188 Q194 176 206 144 Q234 252 212 362 Q196 336 174 326 L130 304 Z"/>
+    <path d="M130 270 L174 290 Q196 300 212 362 Q196 336 174 326 L130 304 Z" fill="url(#hatch)" stroke="none" opacity="0.45"/>
+    <path class="edge" d="M206 144 Q234 252 212 362 L203 348 Q223 252 198 160 Z" fill="#007C86" stroke-width="2"/>
+    <path d="M138 214 L170 202 Q188 194 196 172" fill="none" stroke-width="1.2"/>
+    <path d="M138 296 L170 312" fill="none" stroke-width="1.2"/>
+    <!-- pierced decoration -->
+    <circle cx="152" cy="254" r="8" fill="#16181B"/>
+    <path d="M178 206 Q196 254 178 302 Q186 254 178 206 Z" fill="#16181B" stroke-width="1.2"/>
+
+    <!-- back hook, curving down to a point -->
+    <path d="M110 214 L66 214 Q34 214 10 244 Q42 236 62 244 Q84 252 110 266 Z"/>
+    <path d="M110 230 L64 230 Q42 232 26 240" fill="none" stroke-width="1.4"/>
+  </g>
+</svg>

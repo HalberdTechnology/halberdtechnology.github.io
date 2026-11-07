@@ -1,0 +1,51 @@
+/* Game marketing pages (Revolution, Moonbluff, Under the Radar). Each page sets --primary to its
+   game's accent. Follows Apple's marketing guidelines: real in-app screenshots in a generic device
+   frame (no Apple hardware artwork), "App Store" and "iPhone" written as Apple writes them, and no
+   "Download on the App Store" badge until a game has a live listing to link to. */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+.hero { padding: 5rem 0 4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 5.2rem); font-weight: 900; letter-spacing: 0.08em; margin: 0.75rem 0 0.5rem; animation: rise 0.8s ease-in-out; }
+.hero .motto { font: 500 0.95rem var(--title); letter-spacing: 0.5em; text-transform: uppercase; margin-bottom: 1.75rem; }
+.hero .lede { font-size: 1.2rem; max-width: 32rem; margin-bottom: 2rem; }
+.badge { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.8rem 1.25rem; border: 1px solid var(--outline); border-radius: 4px; font: 600 0.8rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 12px var(--primary); }
+.facts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.facts span { font: 600 0.68rem var(--title); letter-spacing: 0.14em; text-transform: uppercase; padding: 0.45rem 0.7rem; border: 1px solid var(--outline-variant); border-radius: 2px; }
+
+/* Generic phone frame around a real screenshot. */
+.phone { position: relative; width: 100%; max-width: 280px; aspect-ratio: 430 / 880; margin: 0 auto; padding: 10px; border-radius: 36px; background: linear-gradient(145deg, #3a3f45, #16181b); box-shadow: 0 30px 60px rgba(22,24,27,0.22), inset 0 0 0 1px rgba(255,255,255,0.08); }
+.phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+.hero .phone { max-width: 300px; transform: rotate(3deg); }
+
+section.block { padding: 4.5rem 0; border-top: 1px solid var(--outline-variant); }
+section.block > h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0.75rem 0 2rem; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.gallery figcaption { margin-top: 1rem; text-align: center; font-size: 0.95rem; }
+.gallery figcaption strong { display: block; font: 700 0.78rem var(--title); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.2rem; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.features > div { background: var(--container); border: 1px solid var(--outline-variant); border-radius: 4px; padding: 1.5rem; }
+.features h3 { font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.6rem; }
+.specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--outline-variant); border: 1px solid var(--outline-variant); border-radius: 4px; overflow: hidden; }
+.specs > div { background: var(--container); padding: 1.25rem 1.4rem; }
+.specs dd { margin: 0; }
+.specs dt { font: 600 0.7rem var(--title); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.trademark { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 0; font-size: 0.8rem; }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 3rem; } .hero .phone { max-width: 240px; }
+  .gallery { grid-template-columns: repeat(4, 70%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+  .gallery figure { scroll-snap-align: center; }
+  .features { grid-template-columns: 1fr; }
+  .specs { grid-template-columns: 1fr 1fr; }
+}
+
+/* Under the Radar's screenshots are a wider phone than the others. */
+.phone.tall { aspect-ratio: 860 / 1512; }
+
+/* A roster of roles without card art. */
+.roster { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+.roster > div { background: var(--container); border: 1px solid var(--outline-variant); border-top: 3px solid var(--primary); border-radius: 4px; padding: 1.1rem 1.2rem; }
+.roster h3 { font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.roster p { font-size: 0.92rem; margin-top: 0.3rem; }
+.roster .act { color: var(--primary); font-weight: 600; }
+@media (max-width: 860px) { .roster { grid-template-columns: repeat(2, 1fr); } }
