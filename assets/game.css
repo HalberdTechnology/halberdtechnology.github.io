@@ -39,9 +39,6 @@ section.block > h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0.75rem 0 2r
   .specs { grid-template-columns: 1fr 1fr; }
 }
 
-/* Under the Radar's screenshots are a wider phone than the others. */
-.phone.tall { aspect-ratio: 860 / 1512; }
-
 /* A roster of roles without card art. */
 .roster { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
 .roster > div { background: var(--container); border: 1px solid var(--outline-variant); border-top: 3px solid var(--primary); border-radius: 4px; padding: 1.1rem 1.2rem; }
